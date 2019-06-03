@@ -1,5 +1,6 @@
 import React from "react";
 import Nav from "../components/Nav";
+import Page from "../components/Page";
 
 // for simplicity on a custom page,
 // split each section into a stateless component
@@ -37,16 +38,24 @@ const SectionLink = props => {
   );
 };
 
+const description = "Strategic Products";
+
 const Index = () => (
-  <div className="main">
-    <div className="main__content">
-      <Intro />
-      <MainQuote />
-      <SectionLink route="notes" displayName="blog" />
-      <SectionLink route="work" displayName="projects" />
-      <SectionLink route="about" displayName="about him" />
+  <Page
+    description={description}
+    image={"/static/images/avatar.jpg"}
+    title={`Dan Morrison - ${description}`}
+  >
+    <div className="main">
+      <div className="main__content">
+        <Intro />
+        <MainQuote />
+        <SectionLink route="notes" displayName="blog" />
+        <SectionLink route="work" displayName="projects" />
+        <SectionLink route="about" displayName="about him" />
+      </div>
     </div>
-  </div>
+  </Page>
 );
 
 export default Index;
