@@ -1,6 +1,8 @@
 import React from "react";
 import Page from "../components/Page";
 import Nav from "../components/Nav";
+import Main from "../components/Main";
+import Footer from "../components/Footer";
 
 const description = "Personal and client projects by Dan Morrison";
 
@@ -12,7 +14,10 @@ export default function Work() {
       title={"Dan Morrison - About Me"}
     >
       <Nav />
-      <p>This is the work page</p>
+      <Main>
+        <h1>Work</h1>
+      </Main>
+      <Footer />
     </Page>
   );
 }

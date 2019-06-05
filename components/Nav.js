@@ -1,17 +1,20 @@
 import Link from "next/link";
 
 const Nav = () => (
-  <div>
-    <Link href="/about">
-      <a>About</a>
+  <nav>
+    <Link href="/">
+      <a className="nav__link">Home</a>
     </Link>
     <Link href="/work">
-      <a>Work</a>
+      <a className="nav__link">Work</a>
     </Link>
     <Link href="/notes">
-      <a>Notes</a>
+      <a className="nav__link">Notes</a>
     </Link>
-  </div>
+    <Link href="/about">
+      <a className="nav__link">About</a>
+    </Link>
+  </nav>
 );
 
 export default Nav;

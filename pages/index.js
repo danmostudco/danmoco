@@ -33,7 +33,7 @@ const SectionLink = props => {
   var route = "/" + `${props.route}`;
   return (
     <h4 className="main__link-section">
-      Check out his <a href={route}>{props.displayName}</a>
+      {props.displayText} <a href={route}>{props.displayName}</a>
     </h4>
   );
 };
@@ -50,9 +50,21 @@ const Index = () => (
       <div className="main__content">
         <Intro />
         <MainQuote />
-        <SectionLink route="notes" displayName="blog" />
-        <SectionLink route="work" displayName="projects" />
-        <SectionLink route="about" displayName="about him" />
+        <SectionLink
+          route="notes"
+          displayText="Check out his "
+          displayName="blog"
+        />
+        <SectionLink
+          route="work"
+          displayText="View some of his "
+          displayName="projects"
+        />
+        <SectionLink
+          route="about"
+          displayText="Find out more "
+          displayName="about him"
+        />
       </div>
     </div>
   </Page>

@@ -1,8 +1,10 @@
 import React from "react";
 import Page from "../components/Page";
 import Nav from "../components/Nav";
+import Main from "../components/Main";
+import Footer from "../components/Footer";
 
-const description = "Blogs of Dan Morrison";
+const description = "Blog of Dan Morrison";
 
 export default function Notes() {
   return (
@@ -12,7 +14,10 @@ export default function Notes() {
       title={"Dan Morrison - Blog"}
     >
       <Nav />
-      <p>This is the notes page</p>
+      <Main>
+        <h1>Notes</h1>
+      </Main>
+      <Footer />
     </Page>
   );
 }
