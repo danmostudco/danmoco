@@ -5,6 +5,8 @@ import React from "react";
 import { dateTime } from "../utils/date-format";
 import titleStyle from "../utils/title-style";
 
+import GlobalStyle from "./GlobalStyle";
+
 const Page = ({
   children,
   date,
@@ -81,6 +83,7 @@ const Page = ({
         <meta content="@danmostudco" name="twitter:site" />
         <meta content="@danmostudco" name="twitter:creator" />
       </Head>
+      <GlobalStyle />
       {children}
     </>
   );

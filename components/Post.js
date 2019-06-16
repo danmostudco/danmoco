@@ -1,4 +1,4 @@
-import { MDXProvider } from "@mdx-js/tag";
+import { MDXProvider } from "@mdx-js/react";
 import React from "react";
 import styled from "styled-components";
 
@@ -9,15 +9,15 @@ import A from "./elements/a";
 import Blockquote from "./elements/blockquote";
 // import Code from "./elements/code";
 import Em from "./elements/em";
-import Footer from "./footer";
+import Footer from "./Footer";
 import H1 from "./elements/h1";
 import H2 from "./elements/h2";
 import H3 from "./elements/h3";
 import Img from "./elements/img";
 import Li from "./elements/li";
-import Nav from "./nav";
+import Nav from "./Nav";
 import Ol from "./elements/ol";
-import Page from "./page";
+import Page from "./Page";
 import Strong from "./elements/strong";
 // import Subscribe from "./subscribe";
 import Ul from "./elements/ul";
@@ -51,7 +51,7 @@ const Post = ({ children, meta }) => (
     date={meta.date}
     description={meta.description}
     image={meta.image}
-    title={`${meta.title} - Lee Robinson`}
+    title={`${meta.title} - Dan Morrison`}
   >
     <Nav />
     <Main>
