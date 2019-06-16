@@ -1,0 +1,24 @@
+import Date from '../../components/Date'
+import Post from '../../components/Post'
+
+export const meta = {
+date: '2019-06-01',
+description: 'This is a big test for a blog',
+image: '/static/images/test-blog-post-1/banner.jpg',
+title: 'Dan is testing right now'
+}
+
+export default ({children}) => <Post meta={meta}>{children}</Post>
+
+# This is a test post
+
+<Date>{meta.date}</Date>
+
+![Metroid Stuff](/static/images/test-blog-post-1/banner.jpg)
+
+Dan is actively trying to recreate a next an [MDX blog](https://mdxjs.com/getting-started/next/).
+So I am actively seeing how to convert this into _"React Components"_. Slowy and steady.
+
+> Here is an [example Github repo](https://github.com/messa/nextjs-mdx-blog-example), which has some starting points to draw from.
+I'll need to figure out the build scripts.
+Going to leave this here until I can port over my older posts and get everything clicking.

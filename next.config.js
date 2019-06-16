@@ -1,2 +1,13 @@
 const withSass = require("@zeit/next-sass");
-module.exports = withSass();
+const withMDX = require("@next/mdx")({
+  extension: /\.mdx?$/
+});
+
+module.exports = withSass(
+  withMDX({
+    pageExtensions: ["js", "jsx", "md", "mdx"],
+    webpack(config, options) {
+      return config;
+    }
+  })
+);
