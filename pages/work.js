@@ -3,6 +3,7 @@ import Page from "../components/Page";
 import Nav from "../components/Nav";
 import Main from "../components/Main";
 import Footer from "../components/Footer";
+import Projects from "../components/projects/projects";
 
 const description = "Personal and client projects by Dan Morrison";
 
@@ -15,7 +16,7 @@ export default function Work() {
     >
       <Nav />
       <Main>
-        <h1>Work</h1>
+        <Projects />
       </Main>
       <Footer />
     </Page>

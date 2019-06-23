@@ -25,6 +25,7 @@
     "@mdx-js/loader": "^1.0.20",
     "@mdx-js/tag": "^0.20.3",
     "@next/mdx": "^8.1.0",
+    "babel-plugin-inline-react-svg": "^1.1.0",
     "babel-plugin-styled-components": "^1.10.1"
   }
 }
