@@ -1,0 +1,45 @@
+import Date from '../../components/Date'
+import Post from '../../components/Post'
+
+export const meta = {
+date: '2016-08-1',
+description: "As more and more machines step into the fabric of everyday life, what do designers need to consider as morality becomes algorithmic?",
+image: '/static/images/morality/manvsmachine.jpg',
+title: 'Morality and Machines'
+}
+
+export default ({children}) => <Post meta={meta}>{children}</Post>
+
+# Morality and Machines
+
+<Date>{meta.date}</Date>
+
+One of my favorite Youtube videos from this year is the [Atlas Swearing Module](https://www.youtube.com/watch?v=zkv-_LqTeQA), a voice dub of the phrases Boston Dynamics’ flagship robot might actually say if it had to consciously put up with the onerous life of being a laboratory-tested robot. The video ends with Atlas bidding adieu after a day of being bullied by his human overlords saying sarcastically, “See ya later, Kevin. See ya tomorrow [expletive] face! I hope a robot doesn’t burn your [expletive] house down!"
+
+![Man vs Machine](/static/images/morality/manvsmachine.jpg)
+
+It’s fun to anthropomorphize machines in this way. The more functional they are, the more we can relate and empathize. When a robot gets kicked or pushed down, we think about how that would suck if that were us. During the video, I’ve heard peers sigh the same passive “awwwww” they would when watching a puppy struggle to get up after being knocked over by its siblings.
+
+Which is why when I stumbled upon the [MIT Media Lab’s Moral Machine website](http://moralmachine.mit.edu/), I was fascinated in its harsh presentation of a reality not too far from us. The site doesn’t contemplate inflicting hypothetical damage on a hypothetical machine; it instead looks at situations where self-driving cars must choose between killing, injuring, or avoiding humans in worst-case scenarios. Should an autonomous vehicle plow through a crowd of jaywalkers while protecting its unassuming passenger, or should it reward the rebels by crashing itself and killing the on-board owner? The site serves up scenarios like these where visitors can choose what they think would be the morally “correct” decision.
+
+![Car Making Decisions](/static/images/morality/caroutcomes.jpg)
+
+This is has been explored [for some time now](https://www.technologyreview.com/s/542626/why-self-driving-cars-must-be-programmed-to-kill/) with catchy headlines about ethics and philosophy making their way into the broader discussion of technological progress. But I think nothing made the imperative more clear than reading an article about [George Hotz designing his own self-driving car](http://www.bloomberg.com/features/2015-george-hotz-self-driving-car/). In discussing some of the quirks in teaching a car to drive through state-of-the-art machine learning, the author noted "Hotz hadn’t programmed any of these behaviors into the vehicle. He can’t really explain all the reasons it does what it does. It’s started making decisions on its own."
+
+![George Hotz](/static/images/morality/Hotz.jpg)
+
+It’s not so much that the machine is making decisions on its own - computers already do that today, just within the man-made constraints of their code. It’s that the construction of the decision criteria itself is machine-made, leading to a blackbox of thinking. Given the context of the Moral Machine scenarios, this can be a dangerous path to go down. In a world of machine learning, we begin to lose our ability to predict outcomes of the systems we design with the possibility of grave consequences.
+
+Sam Altman and Elon Musk both note these challenges - in fact Musk has gone on record saying Artificial Intelligence is one of the [greatest existential threats to mankind](http://www.vanityfair.com/news/tech/2014/10/elon-musk-artificial-intelligence-fear). Musk gave a wry example of a spambot: "If its [function] is just something like getting rid of e-mail spam and it determines the best way of getting rid of spam is getting rid of humans...”
+
+![Otto Truck](/static/images/morality/otto.jpg)
+
+Yet even outside the dangers of immediate annihilation, machines pose a number of ethical risks to our developed economy. Zack Kanter [noted in his excellent blog post](http://zackkanter.com/2015/01/23/how-ubers-autonomous-cars-will-destroy-10-million-jobs-by-2025/) the swath of industries that are threatened by the rise autonomous vehicles - something to the tune of 10 million jobs could be lost across insurance, servicing, rentals, and supply chain. These are 10 million Americans that need to be considered in policy decisions around retraining, education, and service. What happens when we create a new category of machine that doesn’t boost human productivity, but actually replaces it?
+
+There aren’t tidy answers here. In my work designing for global enterprises and public sector, the relentless march for efficiency gains through technology is commendable, but also opens the door for a needed, candid discussion about not just the next generation of workers, but the current generation of workers. While it may be fun as a technologist to pursue the next big thing, it also requires some of us look to alleviating a brewing storm caused by the technologies we introduce.
+
+![Economist Chart](/static/images/morality/employmentskill.jpg)
+
+This graph from [the Economist](http://www.economist.com/news/special-report/21621237-digital-revolution-has-yet-fulfil-its-promise-higher-productivity-and-better) sums up the challenge. For anyone following the debate around America’s shriveling middle class, the numbers continue to reveal a divide of “haves” and “have-nots.” Yet this analysis doesn't even included the impending rush of technologies that can begin to replicate human intelligence through their own learning capacity, like Hotz’s car. A fleet of 6,000 taxi cabs or 100 delivery trucks could soon be replaced by 10 highly skilled technicians servicing the bunch. How many transferable skills in a new economy might these workers have?
+
+Not only do we have to grapple with the moral implication of machine thinking, but also the societal duty to those who may not be able to adjust in the interim to the new nature of work. While it’s an exciting time to be alive, some fresh perspectives on all fronts will be needed to ensure we maximize the promise of the current bleeding-edge of technology without exacerbating the natural concerns that come in tow.

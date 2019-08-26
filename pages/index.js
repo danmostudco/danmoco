@@ -130,7 +130,7 @@ const Index = () => (
         <Quote>
           <Bio>
             {
-              "Curious product management leader with a results-driven approach to designing and shipping all things digital. Currently heading up New Product Development at LiveSafe."
+              "Curious product management leader with a results-driven approach to designing and shipping all things digital. Currently leading New Product Development at LiveSafe."
             }
           </Bio>
         </Quote>

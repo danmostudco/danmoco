@@ -25,7 +25,7 @@ const StyledProjects = styled.section`
 
 const Projects = () => (
   <StyledProjects>
-    <ProjectsTitle>{"Projects"}</ProjectsTitle>
+    <ProjectsTitle>{"Work"}</ProjectsTitle>
     <ul>
       {projects.map(project => (
         <Project key={project.name} project={project} />

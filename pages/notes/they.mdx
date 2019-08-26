@@ -1,0 +1,42 @@
+import Date from '../../components/Date'
+import Post from '../../components/Post'
+
+export const meta = {
+date: '2016-9-9',
+description: "While conducting a routine usability test, I was brought face to face with my societal responsibility as a software designer. What's it like to be the faceless instigator of someone's pain or pleasure?",
+image: '/static/images/they/testingnotes.jpg',
+title: 'We Are They'
+}
+
+export default ({children}) => <Post meta={meta}>{children}</Post>
+
+# We Are They
+
+<Date>{meta.date}</Date>
+
+The other day I was sitting in a usability test for a particularly emotional digital product I had been designing. It was a web app tooled for monitoring and taking action on student loan debt, with a special focus on distressed borrowers being crushed underneath the weight of their payments. The users of this particular system would often be out of options, out of cash, and likely out of hope.
+
+Our screeners yielded candidates with six figure debts being paid down by menial wage jobs - bartenders, sales associates, caterers who were totally overwhelmed. This made testing the copy and interactions intriguing because not only did raw task success matter, but how the user felt was paramount. How did they react to our phrasing, our color combinations, our presentation of a lot of seemingly bad options?
+
+![User Testing Notes](/static/images/they/testingnotes.jpg)
+
+One of our testers had a lot to say as she clicked through our prototype - this was normal. It was how she phrased it that surprised me.
+
+* “Oh, they must have wanted me to click there."
+* “Huh, I’m not sure they are trying to communicate right here."
+* “They probably could have made this a bit easier to understand."
+* “This was cool! I wonder how they thought of that."
+
+My team sat silently jotting down our notes. I’m pretty sure the tester knew that we had designed the experience she was testing. Not “we” as in a faceless corporation, but the humans in the room. My team. As she continued, I wrote down a single top-line finding that had been long forgotten amongst the minutiae of listing hypotheses, recruiting users, setting up the testing space, synthesizing results, and re-designing. In bold, underlined lettering the note read __“We are They."__
+
+For many, a faceless “They” decides how the world works. "They" decide the options, the details, the rules, and the limitations. Any inconvenience is simply a misstep of a faceless “They,” while any surprise or delight is forward-thinking by the same group. We don’t blame Roger, Amy, Sally, or Himesh. Despite being designed by a fellow human, we often see experiences as simply "the way that they are."
+
+![Apartment Complex](/static/images/they/apartments.jpg)
+
+As a designer who has worked on applications spanning the globe and touching on millions of peoples’ lives, it hearkened me back to a more fundamental look at why design matters. At best, people are benefactors of great design; at worst they are victims. If we wonder why our town has that annoying bottle neck road around the corner, or why the potato chips always seem to be right at eye level rather than more healthy options, or why we can’t find this or that on that website we log into only every nine months - we could blame an amorphous “they.” Or more accurately we could blame someone like me. Someone had to make that decision, and for one reason or another that is where they settled.
+
+In that lens, I acknowledge the gravity of responsibility thrust on the shoulders of designers. I’m a steward of an experience that will either be a net positive or negative on humans’ lives, and getting to something positive is hard, brain-busting work. It requires research, it requires testing, it requires updating Jira tickets and huddling beside developers through implementation. It requires deep analysis and tweaking in real-time. A great designer must shepherd effective designs from the nether of her brain into taps and clicks in the end-user’s hands. Poor designers will abdicate that responsibility.
+
+![Foggy Road](/static/images/they/manypaths_lg.jpg)
+
+In short, it's serious business being “They.” As technology proliferates into every part of our modern lives, there are more canvases upon which we can paint exceptional experiences or colossal inconveniences. When we think of payment infrastructure, grocery delivery, farm analytics, home automation, and mass transportation - all of these are not just tech that will need to simply be. They are technologies that will have human inputs and outputs and the middle layer will need to facilitate something positive. The best thing a designer can be is vigilant, always willing to fight for those who don’t have a voice in the fight.
