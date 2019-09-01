@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-import Link from "../components/link";
-import Page from "../components/page";
+import Link from "../components/Link";
+import Page from "../components/Page";
 import { column } from "../styles/mixins";
 import { colors, spacing } from "../styles/vars";
 

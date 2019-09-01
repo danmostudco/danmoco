@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 
 import { colors, spacing } from "../../styles/vars";
-import Date from "../date";
+import Date from "../Date";
 import H3 from "../elements/h3";
-import Link from "../link";
+import Link from "../Link";
 
 const StyledArticle = styled.li`
   margin-bottom: ${spacing.normal};

@@ -4,11 +4,11 @@ import styled from "styled-components";
 import { heading } from "../styles/mixins";
 import { spacing } from "../styles/vars";
 import A from "../components/elements/a";
-import Footer from "../components/footer";
+import Footer from "../components/Footer";
 import H3 from "../components/elements/h3";
-import Main from "../components/main";
-import Nav from "../components/nav";
-import Page from "../components/page";
+import Main from "../components/Main";
+import Nav from "../components/Nav";
+import Page from "../components/Page";
 import Social from "../components/socials/social";
 
 const AboutTitle = styled.h1`

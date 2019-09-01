@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import { colors } from "../styles/vars";
 
-import Link from "./link";
+import Link from "./Link";
 
 const StyledNav = styled.nav`
   padding: 25px;

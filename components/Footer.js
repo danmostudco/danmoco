@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import Link from "./link";
+import Link from "./Link";
 
 const StyledFooter = styled.footer`
   flex-shrink: 0;
