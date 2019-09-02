@@ -1,6 +1,8 @@
 import React from "react";
 import Router from "next/router";
+import withGA from "next-ga";
 import App, { Container } from "next/app";
+
 class CustomApp extends App {
   render() {
     const { Component, pageProps } = this.props;
@@ -13,4 +15,4 @@ class CustomApp extends App {
   }
 }
 
-export default CustomApp;
+export default withGA("UA-41051140-1", Router)(CustomApp);
