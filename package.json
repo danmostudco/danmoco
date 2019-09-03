@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "next",
     "build": "cross-env NODE_ENV=production next build",
-    "start": "cross-env NODE_ENV=production next start"
+    "start": "cross-env NODE_ENV=production next start",
+    "export": "node scripts/export.js",
+    "now-build": "npm run build && npm run export"
   },
   "author": "",
   "license": "ISC",
@@ -29,6 +31,12 @@
     "@next/mdx": "^8.1.0",
     "babel-plugin-inline-react-svg": "^1.1.0",
     "babel-plugin-styled-components": "^1.10.1",
-    "cross-env": "^5.2.1"
+    "cpy": "^7.3.0",
+    "cross-env": "^5.2.1",
+    "del": "^5.1.0",
+    "execa-output": "^2.0.0",
+    "globby": "^10.0.1",
+    "listr": "^0.14.3",
+    "prettify-xml": "^1.2.0"
   }
 }
