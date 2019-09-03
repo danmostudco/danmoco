@@ -6,6 +6,6 @@
             "use": "@now/static-build"
         }
     ],
-    "name": "danmostudco",
-    "version": 1
+    "name": "site3",
+    "version": 2
 }
