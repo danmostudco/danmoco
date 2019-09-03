@@ -1,0 +1,11 @@
+{
+    "alias": ["danmo.co", "www.danmo.co"],
+    "builds": [
+        {
+            "src": "package.json",
+            "use": "@now/static-build"
+        }
+    ],
+    "name": "danmostudco",
+    "version": 1
+}

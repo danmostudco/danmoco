@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "next",
-    "build": "next build",
-    "start": "next start"
+    "build": "cross-env NODE_ENV=production next build",
+    "start": "cross-env NODE_ENV=production next start"
   },
   "author": "",
   "license": "ISC",
@@ -28,6 +28,7 @@
     "@mdx-js/tag": "^0.20.3",
     "@next/mdx": "^8.1.0",
     "babel-plugin-inline-react-svg": "^1.1.0",
-    "babel-plugin-styled-components": "^1.10.1"
+    "babel-plugin-styled-components": "^1.10.1",
+    "cross-env": "^5.2.1"
   }
 }
