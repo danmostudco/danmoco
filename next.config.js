@@ -1,13 +1,14 @@
-const withSass = require("@zeit/next-sass");
-const withMDX = require("@next/mdx")({
-  extension: /\.mdx?$/
+const rehypePrism = require('@mapbox/rehype-prism');
+const withCSS = require('@zeit/next-css');
+const withMDX = require('@next/mdx')({
+  extension: /\.mdx?$/,
+  options: {
+    hastPlugins: [rehypePrism]
+  }
 });
 
-module.exports = withSass(
+module.exports = withCSS(
   withMDX({
-    pageExtensions: ["js", "jsx", "md", "mdx"],
-    webpack(config, options) {
-      return config;
-    }
+    pageExtensions: ['js', 'mdx'],
   })
 );

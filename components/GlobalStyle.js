@@ -4,7 +4,7 @@ import reset from "styled-reset";
 import { colors, spacing } from "../styles/vars";
 
 const code = `
-    background-color: #f3f3f3;
+    background-color: #2d2d2d;
     border-radius: 2px;
     font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     font-size: 14px;
