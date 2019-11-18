@@ -8,7 +8,30 @@
     "build": "cross-env NODE_ENV=production next build",
     "start": "cross-env NODE_ENV=production next start",
     "export": "node scripts/export.js",
+    "imageoptim": "npm imageoptim:gif && npm imageoptim:jpg && npm imageoptim:png",
+    "imageoptim:gif": "imageoptim \"static/**/*.gif\"",
+    "imageoptim:jpg": "imageoptim \"static/**/*.jpg\"",
+    "imageoptim:png": "imageoptim --no-imageoptim --imagealpha \"static/**/*.png\"",
     "now-build": "npm run build && npm run export"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.gif": [
+      "imageoptim",
+      "git add"
+    ],
+    "*.jpg": [
+      "imageoptim",
+      "git add"
+    ],
+    "*.png": [
+      "imageoptim --no-imageoptim --imagealpha",
+      "git add"
+    ]
   },
   "author": "",
   "license": "ISC",
@@ -38,6 +61,9 @@
     "del": "^5.1.0",
     "execa-output": "^2.0.0",
     "globby": "^10.0.1",
+    "husky": "^3.0.9",
+    "imageoptim-cli": "^3.0.2",
+    "lint-staged": "^8.1.0",
     "listr": "^0.14.3",
     "prettify-xml": "^1.2.0"
   }
