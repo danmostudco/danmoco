@@ -9,9 +9,9 @@
         "start": "cross-env NODE_ENV=production next start",
         "export": "node scripts/export.js",
         "imageoptim": "npm imageoptim:gif && npm imageoptim:jpg && npm imageoptim:png",
-        "imageoptim:gif": "imageoptim \"static/**/*.gif\"",
-        "imageoptim:jpg": "imageoptim \"static/**/*.jpg\"",
-        "imageoptim:png": "imageoptim --no-imageoptim --imagealpha \"static/**/*.png\"",
+        "imageoptim:gif": "imageoptim \"public/static/**/*.gif\"",
+        "imageoptim:jpg": "imageoptim \"public/static/**/*.jpg\"",
+        "imageoptim:png": "imageoptim --no-imageoptim --imagealpha \"public/static/**/*.png\"",
         "prettier": "prettier --write \"**/*.{html,js,json,md,mdx,mjs,yml}\"",
         "lint": "eslint . --ext .json --ext .js",
         "now-build": "npm run build && npm run export"
