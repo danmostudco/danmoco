@@ -6,7 +6,7 @@ export default async (req, res) => {
 
     if (!email) {
         // 2. Throw an error if an email wasn't provided.
-        return res.status(400).json({error: 'Email is red'});
+        return res.status(400).json({error: 'Email not provided'});
     }
 
     try {
