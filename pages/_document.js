@@ -1,28 +1,60 @@
-import Document, { Head, Main, NextScript } from "next/document";
-import { ServerStyleSheet } from "styled-components";
+import Document, {Head, Main, NextScript} from 'next/document';
+import React from 'react';
+import {ServerStyleSheet} from 'styled-components';
 
-export default class MyDocument extends Document {
-  static getInitialProps({ renderPage }) {
-    const sheet = new ServerStyleSheet();
+const GA_TRACKING_ID = 'UA-41051140-1';
 
-    const page = renderPage(App => props =>
-      sheet.collectStyles(<App {...props} />)
-    );
+class CustomDocument extends Document {
+    static async getInitialProps(ctx) {
+        const sheet = new ServerStyleSheet();
+        const originalRenderPage = ctx.renderPage;
 
-    const styleTags = sheet.getStyleElement();
+        try {
+            // eslint-disable-next-line no-param-reassign
+            ctx.renderPage = () =>
+                originalRenderPage({
+                    enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />)
+                });
+            const initialProps = await Document.getInitialProps(ctx);
 
-    return { ...page, styleTags };
-  }
+            return {
+                ...initialProps,
+                styles: (
+                    <>
+                        {initialProps.styles}
+                        {sheet.getStyleElement()}
+                    </>
+                )
+            };
+        } finally {
+            sheet.seal();
+        }
+    }
 
-  render() {
-    return (
-      <html lang="en">
-        <Head>{this.props.styleTags}</Head>
-        <body>
-          <Main />
-          <NextScript />
-        </body>
-      </html>
-    );
-  }
+    render() {
+        return (
+            <html lang="en">
+                <Head>
+                    <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
+                    <script
+                        // eslint-disable-next-line react/no-danger
+                        dangerouslySetInnerHTML={{
+                            __html: `
+                          window.dataLayer = window.dataLayer || [];
+                          function gtag(){dataLayer.push(arguments);}
+                          gtag('js', new Date());
+                          gtag('config', '${GA_TRACKING_ID}');
+                      `
+                        }}
+                    />
+                </Head>
+                <body>
+                    <Main />
+                    <NextScript />
+                </body>
+            </html>
+        );
+    }
 }
+
+export default CustomDocument;

@@ -1,20 +1,16 @@
-//this wall used for code highlighting... 
+//this wall used for code highlighting...
 
-import React from "react";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import React from 'react';
+import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter';
 
-const Code = props => (
-  <SyntaxHighlighter
-    language={props.language}
-    style={{ overflow: "scroll" }}
-    useInlineStyles={false}
-  >
-    {props.children}
-  </SyntaxHighlighter>
+const Code = (props) => (
+    <SyntaxHighlighter language={props.language} style={{overflow: 'scroll'}} useInlineStyles={false}>
+        {props.children}
+    </SyntaxHighlighter>
 );
 
 Code.defaultProps = {
-  language: "jsx"
+    language: 'jsx'
 };
 
 export default Code;
