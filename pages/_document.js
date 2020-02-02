@@ -2,7 +2,7 @@ import Document, {Head, Main, NextScript} from 'next/document';
 import React from 'react';
 import {ServerStyleSheet} from 'styled-components';
 
-const GA_TRACKING_ID = 'UA-41051140-1';
+import {GA_TRACKING_ID} from '../scripts/gtag';
 
 class CustomDocument extends Document {
     static async getInitialProps(ctx) {
@@ -43,7 +43,10 @@ class CustomDocument extends Document {
                           window.dataLayer = window.dataLayer || [];
                           function gtag(){dataLayer.push(arguments);}
                           gtag('js', new Date());
-                          gtag('config', '${GA_TRACKING_ID}');
+
+                          gtag('config', '${GA_TRACKING_ID}', {
+                            page_path: window.location.pathname,
+                          });
                       `
                         }}
                     />
