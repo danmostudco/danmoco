@@ -1,12 +1,13 @@
-import { createGlobalStyle } from "styled-components";
-import reset from "styled-reset";
+import {createGlobalStyle} from 'styled-components';
+import reset from 'styled-reset';
 
-import { colors, spacing } from "../styles/vars";
+import {colors, spacing} from '../styles/vars';
 
 const code = `
-    background-color: #2d2d2d;
+    background-color: #F5F7FA;
+    color: #323F4B;
     border-radius: 2px;
-    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     font-size: 14px;
 `;
 
@@ -108,11 +109,15 @@ const GlobalStyle = createGlobalStyle`
     }
 
     code {
-        ${code}
+        background-color: #F5F7FA;
+        color: #323F4B;
+        border-radius: 3px;
+        font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        font-size: 14px;
+        padding: .2em .4em;
     }
 
     pre {
-        ${code}
         line-height: 1.4em;
         margin: 0 0 ${spacing.normal};
         overflow-x: auto;
