@@ -3,7 +3,7 @@ import Post from '../../components/Post'
 import styled from "styled-components";
 
 export const meta = {
-date: '2020-2-16',
+date: '2020-02-16',
 description: "An introduction to the React Transition Group for CSS animations in components",
 image: '/static/images/avatar.jpg',
 title: 'Intro to React Transition Group'
@@ -31,13 +31,13 @@ In comes [React Transition Group](https://reactcommunity.org/react-transition-gr
 
 I built a quick little test application to show the effect, which you can see in this [Github Repository](https://github.com/danmostudco/ReactTransitionGroupExample). The point was to show a very simple set of objects that transitioned in and out when you tap on them and I used three primary technologies.
 
-- **[React Transition Group](https://github.com/reactjs/react-transition-group)** - the big kahuna of the tutorial, I utilized its two components `<TransitionGroup>` and `<CSSTransition>` to apply CSS classes on demand to handle my fade in and out effects I desired.
-- **[Styled Components](https://github.com/styled-components/styled-components)** - Rather than having a separate style sheet, Styled Components allows me to edit my CSS right next to the JSX I use to build my component, making component styling easier to compartmentalize and follow.
-- **[React Hooks](https://reactjs.org/docs/hooks-reference.html)** - Well known at this point, I used the `useState` hook to manage the state of my application from the top of the Component tree in `App.js`.
+-   **[React Transition Group](https://github.com/reactjs/react-transition-group)** - the big kahuna of the tutorial, I utilized its two components `<TransitionGroup>` and `<CSSTransition>` to apply CSS classes on demand to handle my fade in and out effects I desired.
+-   **[Styled Components](https://github.com/styled-components/styled-components)** - Rather than having a separate style sheet, Styled Components allows me to edit my CSS right next to the JSX I use to build my component, making component styling easier to compartmentalize and follow.
+-   **[React Hooks](https://reactjs.org/docs/hooks-reference.html)** - Well known at this point, I used the `useState` hook to manage the state of my application from the top of the Component tree in `App.js`.
 
 I’ll mainly focus on the file `TileGroup.js` as this holds all the React Transition Group logic, but the above libraries were used to develop the end-to-end example you see.
 
-![the test application](/static/images/transition-group/appscreenshot.png)
+![the test application](/static/images/transition-group/appscreen.png)
 
 ## The App
 
@@ -105,9 +105,9 @@ const TileGroup = props => {
 
 Take notice of a few nuances
 
-- The `TransitionGroup` component becomes a wrapper for the whole experience. Previously I used a styled component `StyledGrid` as the wrapper. which applied all the grid styling I wanted for the container. If you do not specify a `component` prop for the `TransitionGroup`, Transition Group will simply create a new div that holds all the functionality. If you do pass in a component, the specified component will assume all the functionality of the Transition Group. Thus, I passed it my original `StyledGrid` component as to not have to rejig my CSS to account for this extra div in the DOM.
-- Each `Tile` component is now wrapped in a new, critical component, the `CSSTransition` component. This must be a direct child of the `TransitionGroup` component with no intermediate ancestors in between the two, or else you begin to get some weird behavior.
-- The `CSSTransition` component carries a few argument. `key` is standard to include when mapping over elements in React. The `timeout` specifies how long it is going to apply the CSS classes necessary to facilitate the transition in milliseconds, so in this case I want my transition to last for about a third of a second. The `classNames` prop corresponds to what set of CSS classes the component will attach to achieve the transition effect. **This is very important to set and have correspond to your CSS**.
+-   The `TransitionGroup` component becomes a wrapper for the whole experience. Previously I used a styled component `StyledGrid` as the wrapper. which applied all the grid styling I wanted for the container. If you do not specify a `component` prop for the `TransitionGroup`, Transition Group will simply create a new div that holds all the functionality. If you do pass in a component, the specified component will assume all the functionality of the Transition Group. Thus, I passed it my original `StyledGrid` component as to not have to rejig my CSS to account for this extra div in the DOM.
+-   Each `Tile` component is now wrapped in a new, critical component, the `CSSTransition` component. This must be a direct child of the `TransitionGroup` component with no intermediate ancestors in between the two, or else you begin to get some weird behavior.
+-   The `CSSTransition` component carries a few argument. `key` is standard to include when mapping over elements in React. The `timeout` specifies how long it is going to apply the CSS classes necessary to facilitate the transition in milliseconds, so in this case I want my transition to last for about a third of a second. The `classNames` prop corresponds to what set of CSS classes the component will attach to achieve the transition effect. **This is very important to set and have correspond to your CSS**.
 
 What does this look like? I used the `classNames=transition` and above in my styled component, I defined those css classes to look like the below snippet. Note each class begins with `transition-` because of the settings within the `CSSTransition` Component.
 
