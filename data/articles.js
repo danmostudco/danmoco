@@ -1,5 +1,10 @@
 export default [
     {
+        date: 'March 08, 2020',
+        slug: 'why-i-journal',
+        title: 'Why I Journal'
+    },
+    {
         date: 'February 16, 2020',
         slug: 'transition-group',
         title: 'Intro to React Transition Group'
