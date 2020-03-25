@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Link from '../components/Link';
+import Nav from '../components/Nav';
 import Page from '../components/Page';
 import {column} from '../styles/mixins';
 import {colors, spacing} from '../styles/vars';
@@ -14,7 +15,7 @@ import WorkList from '../components/home/WorkList';
 // then imported them into the Index component
 
 const Main = styled.main`
-    background-color: #18171d;
+    background-color: ${colors.dark};
     color: #fefefe;
     display: flex;
     flex-direction: column;
@@ -89,6 +90,7 @@ const SelectWork = styled.h2`
 const description = 'Strategic Products';
 const Index = () => (
     <Page description={description} image={'/static/images/avatar.jpg'} title={`Dan Morrison - ${description}`}>
+        <Nav background-color={colors.dark} />
         <Main>
             <HeroSection className="home">
                 <HeroText>Dan Morrison</HeroText>
