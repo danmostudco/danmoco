@@ -8,10 +8,10 @@ import Link from './Link';
 const NavLink = styled(Link)`
     color: ${colors.accent};
     font-size: 0.9em;
-    letter-spacing: 0.03em;
     text-decoration: none;
     text-transform: uppercase;
     transition: all 0.15s ease;
+    font-weight: 700;
 
     :hover {
         color: ${colors.accent};
@@ -56,7 +56,7 @@ const Face = styled.a`
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background-image: url(/static/home/face.jpg);
+    background-image: url(/static/home/facehedcut.jpg);
     background-position: 0px 0px;
     background-size: cover;
 `;

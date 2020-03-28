@@ -15,27 +15,52 @@ const GlobalStyle = createGlobalStyle`
     ${reset}
 
     @font-face {
-        font-family: "Fira Sans";
-        src: url("/static/fonts/FiraSans-Bold.ttf");
-        font-weight: bold;
-        font-display: auto;
-	    font-style: normal;
-    }
-    
-    @font-face {
-        font-family: "Fira Sans";
-        src: url("/static/fonts/FiraSans-Italic.ttf");
-        font-weight: normal;
-        font-display: auto;
-	    font-style: italic;
+        font-family: 'Inter';
+        src: url("/static/fonts/Inter-Light.otf") format('opentype');
+        font-weight: 300;
+        font-style: normal;
     }
 
     @font-face {
-        font-family: "Fira Sans";
-        src: url("/static/fonts/FiraSans-Regular.ttf");
-        font-weight: normal;
-        font-display: auto;
-	    font-style: normal;
+        font-family: 'Inter';
+        src: url("/static/fonts/Inter-LightItalic.otf") format('opentype');
+        font-weight: 300;
+        font-style: italic;
+    }
+
+    @font-face {
+        font-family: 'Inter';
+        src: url("/static/fonts/Inter-Regular.otf") format('opentype');
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Inter';
+        src: url("/static/fonts/Inter-Medium.otf") format('opentype');
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Inter';
+        src: url("/static/fonts/Inter-Semibold.otf") format('opentype');
+        font-weight: 600;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Inter';
+        src: url("/static/fonts/Inter-Bold.otf") format('opentype');
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Inter';
+        src: url("/static/fonts/Inter-ExtraBold.otf") format('opentype');
+        font-weight: 800;
+        font-style: normal;
     }
 
     ::selection {
@@ -45,7 +70,7 @@ const GlobalStyle = createGlobalStyle`
     
     html {
         box-sizing: border-box;
-        font-family: Fira Sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+        font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
         min-width: 320px;
         scroll-behavior: smooth;
 
@@ -106,6 +131,11 @@ const GlobalStyle = createGlobalStyle`
 
     p {
         margin: 1.5em 0;
+        letter-spacing: -0.2px;
+    }
+
+    li {
+        letter-spacing: -0.2px;
     }
 
     code {

@@ -25,7 +25,8 @@ const Main = styled.main`
 const HeroText = styled.h1`
     font-size: 90px;
     line-height: 1.18em;
-    font-weight: 700;
+    font-weight: 800;
+    letter-spacing: -2px;
     color: ${colors.accent};
 
     @media (max-width: 991px) {
@@ -47,8 +48,9 @@ const HeroText = styled.h1`
 
 const Tagline = styled.h2`
     font-size: 70px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.1em;
+    letter-spacing: -0.5px;
 
     @media (max-width: 991px) {
         max-width: none;

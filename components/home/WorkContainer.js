@@ -285,7 +285,7 @@ const WorkContainer = ({project}) => (
             src={project.backgroundImage}
             alt=""
             sizes="100vw"
-            srcset={project.backgroundsrcset}
+            srcSet={project.backgroundsrcset}
             className="work-img desktop hide"
         />
     </StyledWorkContainer>
