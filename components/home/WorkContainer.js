@@ -252,6 +252,30 @@ const StyledWorkContainer = styled.div`
     }
 `;
 
+// if no second button exists, don't show two buttons
+const WorkButtons = ({button1Link, button1Label, button2Link, button2Label}) => {
+    if (button2Link && button2Label) {
+        return (
+            <div className="work-buttons">
+                <a href={button1Link} className="w-button">
+                    {button1Label}
+                </a>
+                <a href={button2Link} className="w-button">
+                    {button2Label}
+                </a>
+            </div>
+        );
+    }
+
+    return (
+        <div className="work-buttons">
+            <a href={button1Link} className="w-button">
+                {button1Label}
+            </a>
+        </div>
+    );
+};
+
 const WorkContainer = ({project}) => (
     <StyledWorkContainer>
         <div className="work-description">
@@ -271,14 +295,12 @@ const WorkContainer = ({project}) => (
                 </div>
             </div>
             <p className="blurb">{project.description}</p>
-            <div className="work-buttons">
-                <a href={project.button1Link} className="w-button">
-                    {project.button1Label}
-                </a>
-                <a href={project.button2Link} className="w-button">
-                    {project.button2Label}
-                </a>
-            </div>
+            <WorkButtons
+                button1Link={project.button1Link}
+                button1Label={project.button1Label}
+                button2Link={project.button2Link}
+                button2Label={project.button2Label}
+            ></WorkButtons>
         </div>
 
         <img
