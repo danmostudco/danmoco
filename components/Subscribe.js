@@ -9,7 +9,7 @@ const Input = styled.input`
     border-radius: 4px;
     border: 1px solid #cac8c8;
     color: ${(props) => props.theme.primary};
-    font-family: 'Fira Sans';
+    font-family: 'Inter';
     font-size: 1rem;
     font-weight: 400;
     height: 40px;
@@ -19,7 +19,7 @@ const Input = styled.input`
 
 const Label = styled.label`
     color: #868686;
-    font-family: 'Fira Sans';
+    font-family: 'Inter';
     font-size: 0.8rem;
     font-weight: 400;
     text-transform: uppercase;
@@ -32,7 +32,7 @@ const Button = styled.button`
     box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
     color: #fff;
     cursor: pointer;
-    font-family: 'Fira Sans';
+    font-family: 'Inter';
     font-size: 1rem;
     font-weight: 400;
     height: 40px;

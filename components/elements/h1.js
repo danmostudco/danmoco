@@ -6,6 +6,8 @@ import titleStyle from '../../utils/title-style';
 
 const StyledH1 = styled.h1`
     ${heading} font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -2px;
     margin: 0;
     line-height: 1.35;
 

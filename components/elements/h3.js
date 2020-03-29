@@ -8,6 +8,7 @@ import titleStyle from '../../utils/title-style';
 const StyledH3 = styled.h3`
     ${heading} font-size: 20px;
     margin: ${spacing.normal} 0 ${spacing.small};
+    letter-spacing: -1.5px;
 
     @media (min-width: 768px) {
         font-size: 24px;
