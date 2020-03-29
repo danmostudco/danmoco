@@ -17,6 +17,10 @@ const StyledArticle = styled.li`
     h3 {
         margin-top: 0;
         font-size: 30px;
+
+        @media (max-width: 479px) {
+            font-size: 20px;
+        }
     }
 
     :hover {
