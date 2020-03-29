@@ -12,7 +12,7 @@ export default [
         button2Link: '/notes/how-i-journal',
         backgroundImage: '/static/home/cb_2000.png',
         backgroundsrcset:
-            '/static/home/cb_500.png 500w, /static/home/cb_800.png 800w, /static/home/cb_1080.png 1080w, /static/home/cb_6000.png 1600w, /static/home/cb_2000.png 2000w'
+            '/static/home/cb_500.png 500w, /static/home/cb_800.png 800w, /static/home/cb_1080.png 1080w, /static/home/cb_1600.png 1600w, /static/home/cb_2000.png 2000w'
     },
     {
         logo: '/static/home/cb_icon.png',
@@ -25,6 +25,6 @@ export default [
         button1Link: '/notes/how-i-journal',
         backgroundImage: '/static/home/cb_2000.png',
         backgroundsrcset:
-            '/static/home/cb_500.png 500w, /static/home/cb_800.png 800w, /static/home/cb_1080.png 1080w, /static/home/cb_6000.png 1600w, /static/home/cb_2000.png 2000w'
+            '/static/home/cb_500.png 500w, /static/home/cb_800.png 800w, /static/home/cb_1080.png 1080w, /static/home/cb_1600.png 1600w, /static/home/cb_2000.png 2000w'
     }
 ];

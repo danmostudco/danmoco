@@ -44,7 +44,7 @@ const GlobalStyle = createGlobalStyle`
 
     @font-face {
         font-family: 'Inter';
-        src: url("/static/fonts/Inter-Semibold.otf") format('opentype');
+        src: url("/static/fonts/Inter-SemiBold.otf") format('opentype');
         font-weight: 600;
         font-style: normal;
     }
