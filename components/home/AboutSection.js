@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import {Section} from './sections';
+import Section from '../Section';
 
 const AboutHeader = styled.h2`
     width: 100%;

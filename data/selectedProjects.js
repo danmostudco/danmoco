@@ -7,7 +7,7 @@ export default [
         company: 'LiveSafe',
         description: 'A conversational UI directed at helping users categorize safety incidents.',
         button1Label: 'Case Study',
-        button1Link: '/notes/how-i-journal',
+        button1Link: '/work/safebot',
         button2Label: 'Press',
         button2Link: '/notes/how-i-journal',
         backgroundImage: '/static/home/cb_2000.png',

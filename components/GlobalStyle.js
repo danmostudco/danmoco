@@ -63,6 +63,13 @@ const GlobalStyle = createGlobalStyle`
         font-style: normal;
     }
 
+    @font-face {
+        font-family: 'Merriweather';
+        src: url("/static/fonts/Merriweather-BoldItalic.ttf") format('opentype');
+        font-weight: 700;
+        font-style: normal;
+    }
+
     ::selection {
         background-color: #ff5252;
         color: #fefefe;

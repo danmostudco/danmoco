@@ -7,7 +7,8 @@ import Page from '../components/Page';
 import {column} from '../styles/mixins';
 import {colors, spacing} from '../styles/vars';
 
-import {Section, HeroSection, WorkSection} from '../components/home/sections';
+import Section from '../components/Section';
+import {HomeHeroSection, WorkSection} from '../components/home/homeSections';
 import WorkList from '../components/home/WorkList';
 import AboutSection from '../components/home/AboutSection';
 import Social from '../components/socials/social';
@@ -111,14 +112,14 @@ const HomeFooter = styled.div`
 const description = 'Strategic Products';
 const Index = () => (
     <Page description={description} image={'/static/images/avatar.jpg'} title={`Dan Morrison - ${description}`}>
-        <Nav background-color={colors.dark} />
+        <Nav />
         <Main>
-            <HeroSection className="home">
+            <HomeHeroSection className="home">
                 <HeroText>Dan Morrison</HeroText>
                 <Tagline>
                     Curious product leader with experience turning strategic imperatives into digital products.
                 </Tagline>
-            </HeroSection>
+            </HomeHeroSection>
             <WorkSection>
                 <SelectWork>Select Projects</SelectWork>
                 <WorkList></WorkList>

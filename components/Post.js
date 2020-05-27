@@ -40,6 +40,7 @@ const components = {
 const Main = styled.main`
     ${column}
     padding: ${spacing.normal};
+    margin-top: ${spacing.jumbo};
     
     @media (min-width: 768px) {
         font-size: 18px;

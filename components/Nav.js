@@ -32,7 +32,7 @@ const Header = styled.div`
     right: 0%;
     bottom: auto;
     z-index: 9;
-    background-color: ${(props) => props['background-color'] || '#FFFFFF'};
+    position: absolute;
 `;
 
 const HeaderContainer = styled.div`
@@ -62,7 +62,7 @@ const Face = styled.a`
 `;
 
 const Nav = (props) => (
-    <Header background-color={props['background-color']}>
+    <Header>
         <HeaderContainer>
             <Face href="/"></Face>
             <div>
@@ -72,42 +72,5 @@ const Nav = (props) => (
         </HeaderContainer>
     </Header>
 );
-
-// const StyledNav = styled.nav`
-//     padding: 25px;
-
-//     @media (min-width: 737px) {
-//         padding: 2em 4em 4em;
-//         text-align: right;
-//     }
-// `;
-
-// const NavLink = styled(Link)`
-//     color: ${colors.accent};
-//     font-size: 0.9em;
-//     letter-spacing: 0.03em;
-//     text-decoration: none;
-//     text-transform: uppercase;
-//     transition: all 0.15s ease;
-
-//     :hover {
-//         color: ${colors.text};
-//     }
-
-//     + a {
-//         margin: 0 0 0 2.5em;
-
-//         @media (min-width: 737px) {
-//             margin: 0 0 0 4em;
-//         }
-//     }
-// `;
-
-// const Nav = () => (
-//     <StyledNav>
-//         <NavLink>{'Home'}</NavLink>
-//         <NavLink slug={'notes'}>{'Notes'}</NavLink>
-//     </StyledNav>
-// );
 
 export default Nav;
