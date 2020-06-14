@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import {Section} from './sections';
+import Section from '../Section';
 
 const AboutHeader = styled.h2`
     width: 100%;
@@ -20,6 +20,10 @@ const AboutHeader = styled.h2`
 
     @media (max-width: 767px) {
         font-size: 32px;
+    }
+
+    @media (max-width: 479px) {
+        font-size: 24px;
     }
 `;
 
@@ -52,6 +56,7 @@ const Bio = styled.div`
 
     @media (max-width: 479px) {
         grid-row-gap: 0px;
+        margin-top: 20px;
     }
 
     p {
@@ -65,6 +70,10 @@ const Bio = styled.div`
         font-size: 18px;
         line-height: 1.5em;
         font-weight: 400;
+    }
+
+    @media (max-width: 479px) {
+        font-size: 16px;
     }
 `;
 

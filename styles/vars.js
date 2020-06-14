@@ -12,6 +12,7 @@ export const colors = {
 export const spacing = {
     extralarge: '2.5em',
     extrasmall: '0.5em',
+    jumbo: '5em',
     large: '2em',
     normal: '1.5em',
     small: '1em'
