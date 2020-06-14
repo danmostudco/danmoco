@@ -87,6 +87,9 @@ const SelectWork = styled.h2`
         margin-bottom: 20px;
         font-size: 32px;
     }
+    @media (max-width: 479px) {
+        font-size: 24px;
+    }
 `;
 
 const HomeFooter = styled.div`
