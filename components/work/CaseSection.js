@@ -124,6 +124,101 @@ const CaseSection = styled.div`
         margin-top: 40px;
         margin-bottom: -80px;
     }
+
+    ._2-col {
+        display: grid;
+        grid-auto-flow: row;
+        grid-auto-columns: 1fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+
+        @media (max-width: 479px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    ._3-col {
+        display: grid;
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-flex: 1;
+        flex: 1;
+        grid-auto-columns: 1fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+
+        @media (max-width: 479px) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .h-stack {
+        position: relative;
+        display: grid;
+        width: 100%;
+        max-width: 960px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        grid-auto-columns: 1fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        grid-template-columns: 1fr 1fr;
+        -ms-grid-rows: auto;
+        grid-template-rows: auto;
+
+        @media (max-width: 991px) {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        @media (max-width: 767px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+        }
+
+        @media (max-width: 479px) {
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            flex-direction: column;
+        }
+    }
+
+    .h-stack.reverse {
+        position: static;
+
+        @media (max-width: 767px) {
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: reverse;
+            flex-direction: column-reverse;
+            flex-direction: column-reverse;
+        }
+
+        @media (max-width: 479px) {
+            position: static;
+        }
+    }
+
+    .align-center {
+        align-self: center;
+    }
+
+    .hide-small-viewport {
+        @media (max-width: 479px) {
+            display: none;
+        }
+    }
 `;
 
 export default CaseSection;
