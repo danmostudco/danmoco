@@ -70,10 +70,10 @@ const Bio = styled.div`
         font-size: 18px;
         line-height: 1.5em;
         font-weight: 400;
-    }
 
-    @media (max-width: 479px) {
-        font-size: 16px;
+        @media (max-width: 479px) {
+            font-size: 16px;
+        }
     }
 `;
 

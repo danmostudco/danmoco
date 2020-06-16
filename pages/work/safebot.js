@@ -320,6 +320,12 @@ const Index = () => (
                         draws so heavily on so many moving parts was a real treat, and an amazing problem-space to work
                         in.
                     </p>
+                    <p>
+                        A very special thanks to the multi-talented [Geoff
+                        Nelowet](https://www.linkedin.com/in/geoff-nelowet-ba874736/) for incredible design leadership
+                        during this process & [Tim Gillons](https://www.linkedin.com/in/timgillons/) for exceptional
+                        product management as we evolved this from initial concepts to full offering.
+                    </p>
                 </CaseSection>
             </Wrapper>
         </CaseMain>
