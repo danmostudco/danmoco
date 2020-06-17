@@ -1,0 +1,113 @@
+import Date from '../../components/Date'
+import Post from '../../components/Post'
+import styled from "styled-components";
+
+export const meta = {
+date: '2020-06-16',
+description: "Project Overview of a Bus Application with Mapbox & Next.js",
+image: '/static/images/avatar.jpg',
+title: 'Better Bus - see where DC\'s buses can take you'
+}
+
+export default ({children}) => <Post meta={meta}>{children}</Post>
+
+# Better Bus
+
+<Date>{meta.date}</Date>
+
+[![link to tutorial](/static/images/bus/youtubethumbnail.jpg)](https://youtu.be/t7AFFx_st5s)
+
+_You can view a [video intro](https://youtu.be/t7AFFx_st5s) running through the project or by tapping the above image, and I've provided a [Github repository](https://github.com/danmostudco/betterbus) with all code if you want to spin up your own DC Bus Map!_
+
+I live in Washington DC, where the Bus System is pretty robust and especially useful as you begin to get off the standard metro lines that make up the primary arteries of the city. I have 5+ bus stops literally within eye distance of my house; yet I have found it difficult to find a resource which easily shows where each of those stops can take me all on a single screen. If you already have the tribal knowledge of which bus to take when to where you need to go, or use things like the Transit App or Google Maps for one off trips, you may end up developing a mental rolodex of bus destinations. But I literally just wanted to answer _”where can the bus take me?_” As it turns out, my nearest bus stop can take me almost directly to my friend Andrew’s house, something I haven't taken advantage of simply because I didn’t know which of the several bus lines went up that way.
+
+## A Problem with Aggregating
+
+I found this lack of "big picture" bus exploration to be a bit tragic. The public bus system in DC gives a great deal of coverage all over the city, and with apps like Transit are extremely easy to build a routine and schedule around. Yet I struggled with standing at a bus stop and identifying potential destinations. I’m at a portal that can take me to a broad spectrum of locales in the city… but which ones?
+
+The existing solutions I found left much to be desired for this use case:
+
+![a few different bus form factors](/static/images/bus/busOptions.png)
+
+* Aggregate time tables for all buses, which don't show the geospatial path of the bus route
+* A bus system map that is cryptic to read and overlaps tremendously, forcing you to lose track of where a bus starts and where a bus ends, or individual maps which are hard to aggregate
+* [Map resources](https://www.wmata.com/schedules/maps/) which allow you to show an individual bus route on a map one at a time, in cases where multiple bus routes are available, it’s hard to keep track of routes you have added and easily add and remove them
+
+## My Attempt at a Bus Map
+
+While each of these are feasible to work through, I wanted something tailor made for the use case I was lacking, namely seeing where the bus could take me in the moment. I wanted to be able to stand at a bus stop, type in the numbers listed on the sign, and effortlessly see where that particular location tentacled out to - where I could go. The result was a mobile friendly mapping project I called [Better Bus](https://github.com/danmostudco/betterbus).
+
+![app screen shot](/static/images/bus/AppScreenshot.png)
+
+I built this with a few technologies I was interested in taking a deeper look at across a spectrum of providers:
+
+* [Next JS](https://github.com/zeit/next.js)
+* [Mapbox](https://www.mapbox.com/)
+* [React Map GL](https://github.com/visgl/react-map-gl)
+* [WMATA API](https://developer.wmata.com/)
+* [React Transition Group](https://github.com/danmostudco/ReactTransitionGroupExample)
+* [Deployed with Now](https://github.com/zeit/now)
+
+While I’m still pretty far from having a production-grade application with graceful error logic and easily refactorable code, I succeeded in building something I have used in the field several times now. Occasionally on a morning run or afternoon walk I would come across the standard metro bus sign and wonder what other parts of DC might be “unlocked” by the various buses that service that station. In a matter of seconds I was able to add the respective routes to my map and see the opportunities afforded.
+
+## Key Requirements for the Solution
+
+There were a few key concepts I focused on to enable the use case described above, each optimized for the limited problem space of "exploring" bus routes.
+
+### Mobile First UX Patterns
+While many applications for exploring buses are optimized for desktop experiences, I wanted something that sought to engage users who were already at the bus stop. I travel DC almost exclusively by metro, by foot, or by bus; so I “stumble across” bus stops when I am out and about. This meant the design had to fit all the components in a mobile viewport for easy adding and viewing of routes. I started from mobile design first and then ensured it could scale up to tablet and desktop sizes.
+
+### Web App vs Native
+It had to be mobile web, as I have seen in my professional line of work that native applications are tough to get people to download. Once more, mobile web allows for steadier streams of smaller improvements, as opposed to relying on users to download new versions of a mobile application. I see mobile web as the “opening bid” for almost any mobile-based experience - in most conditions almost all options should first be exhausted on the mobile browser before then pushing for a native experience.
+
+This can be tough to nail, as getting some solutions to work on both mobile safari and chrome requires a bit of CSS hacking. Many solutions and CSS generators will handle some levels of browser compatibility, but it’s best to test key flows in multiple browsers and devices if possible.
+
+### Easy to Add and Remove Routes
+It was important that adding routes was dead simple. Some bus signs only have one or two routes, other have five or six. Thus the ability to add a new route in a matter of taps, all with the map in view to view results was key. I loaded in all the possible routes to the search field using the `<datalist>` tag, creating a cheap type ahead of sorts. That way if a user types in the number 8, it will show all routes containing the number 8 helping to minimize cognitive load on the user.
+
+Displaying which routes were on the map was critical. In the official [WMATA bus map page](https://www.wmata.com/schedules/maps/), once you have added a bus route, it’s tough to see which particular routes are on screen, especially with all the pins from individual stops clouding the map. You also have to clear the map to remove any individual route, making simple adding and removing tedious. To improve upon this, I did two things
+* Every route gets a very clear “pill” that shows up beneath the search bar as to inform the user what routes have been selected
+* Every route can be removed in a single tap, letting users quickly drop any routes they may have accidentally fat-fingered or are no longer interested in viewing.
+
+### Performance Friendly
+To enable the above, I also created some custom caching logic speed up adding routes and removing routes. This is done in a few ways
+* Per above, I use the `<datalist>` element to surface which routes are available. This is stored in the application versus getting this from the WMATA API every time.
+* When a route is searched for, the application checks to see if the route has been added during the session. If so, the route is grabbed from the local cache, as opposed to going back to WMATA
+* When a route is removed, the route gets saved to the cache. This is what powers the above cache solution when a user is searching.
+
+### More Focus on the Routes than the Stops
+I found a lot of custom applications for DC buses that simply plotted every stop on a map in a deluge of map pins, effectively telling the user to "figure it out." I wasn’t interested in extrapolating bus routes from map pins, I wanted to see an actual route - thick, clear lines on a map. As to avoid information overload, my first iteration of the application focused solely on showing the path of the bus route as a clear, red line on a map. In future iterations I could see myself adding the ability to toggle on bus stop pins, but given this is where most other solutions start, I opted instead to focus on the actual lines that make up a route. This took a surprising amount of time to figure out how to implement, so I can see why many people skip this step!
+
+
+## Technical Aspects of the Application
+
+![highlighting components in the app](/static/images/bus/appDiagram.jpg)
+
+For completeness sake, you can see the full code in [GitHub here](https://github.com/danmostudco/betterbus), but I wanted to call out some key functionality in each portion of the application.
+
+### RouteContext.js
+Using react hooks, I create a Provider that wraps the full application within `index.js` and this is what I used for my state management solution. Thus every component that needs to be aware of this application state contains `import { RouteContext } from "./RouteContext";` at the top of the file to ensure I can read state and write to state rather than prop drilling too much. Within RouteContext I store the `activeRoutes` which is anything currently reflected on the map and in the Route pills beneath the search bar, and `cachedRoutes` which is any route that has been added during the browsing session.
+
+### Map.js
+I used the [react-map-gl library](https://github.com/visgl/react-map-gl) to wrap my Mapbox map in a React component, allowing more consistent treatment of all the elements within the React paradigm. `Map.js` utilizes the RouteContext above to know which routes should be displayed on the map.
+
+The routes are drawn with a `PolylineOverlay`, a solution I utilized from [this issue](https://github.com/visgl/react-map-gl/issues/591) on the repo. Each route receives its own PolylineOverlay; I then place each on the map via a `.map` function inside the MapGL component by iterating over the active routes in `Route Context`.
+
+
+### SearchBar.js
+This component is the workhorse of the experience, fetching data and updating the RouteProvider with routes to be shown on the map and in the tags. It's probably not the cleanest implementation, but for the purposes of this prototype and getting something running, I found it to work just fine.
+
+The search bar has an extensive function called `submitRoute` which calls a number of functions around checking if the Route exists, if it’s already on the map, if it’s already in the cache, and finally if necessary going to the API and fetching the route. This level of checking was necessary to help provide a speedier experience if a user was adding and removing routes to compare different possibilities within the same session.
+
+As a faux type ahead, I implemented a simple `<datalist>` element to pre-fill the search box will available routes, which for more exploratory use cases helped provide guidance on potential searches.
+
+
+### Tags.js & Tag.js
+Finally, `Tags.js` and `Tag.js` simply controlled the adding and removing of routes. The tags were the inspiration for my previous post on [React Transition Group](/notes/transition-group), and facilitates the fading and and fading out of elements as they are added and removed from the experience. This is achieved by wrapping the whole group in a `<TransitionGroup>` component and each individual tag in a `<CSSTransition>` component.
+
+`Tag.js` removes routes, adding removed routes to the cache in case users would like to quickly add them back. It achieves all this by interacting with `RouteContext` to remove items from activeRoutes and adding them to cachedRoutes, which are both aspects of the context.
+
+## Closing
+This was a fun project to work on that scratched my own itch in many ways. While other solutions were available, each of them had downsides for my unique use-case, and I thought this was a good way to showcase how opinionated design can focus a refined experience for the optimal user journey. This app isn’t for way-finding, it’s not for getting from point A to point B; it’s optimized for seeing the litany of destinations that one day *could* become point A’s and B’s in the future.
+
+While frustrating to code at times, I’ve reaped incredible joy by having a final product of my own. The app has become something I've used multiple times already while out and about on walks in the city; providing a great companion in exploring DC and its public transit offerings.

@@ -321,10 +321,13 @@ const Index = () => (
                         in.
                     </p>
                     <p>
-                        A very special thanks to the multi-talented [Geoff
-                        Nelowet](https://www.linkedin.com/in/geoff-nelowet-ba874736/) for incredible design leadership
-                        during this process & [Tim Gillons](https://www.linkedin.com/in/timgillons/) for exceptional
-                        product management as we evolved this from initial concepts to full offering.
+                        A very special thanks to the multi-talented{' '}
+                        <a href="https://www.linkedin.com/in/geoff-nelowet-ba874736/">Geoff Nelowet</a> for incredible
+                        design leadership during this process,{' '}
+                        <a href="https://www.linkedin.com/in/timgillons/">Tim Gillons</a> for exceptional product
+                        management as we evolved this from initial concepts to full offering, and{' '}
+                        <a href="https://www.linkedin.com/in/james-nix-959a332a/">James Nix</a> for paving the way for
+                        the underlying data science to power the experience.
                     </p>
                 </CaseSection>
             </Wrapper>
