@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {colors} from '../../styles/vars';
 
 const CaseSection = styled.div`
     display: flex;
@@ -217,6 +218,15 @@ const CaseSection = styled.div`
     .hide-small-viewport {
         @media (max-width: 479px) {
             display: none;
+        }
+    }
+
+    a {
+        color: ${colors.accent};
+        text-decoration: none;
+
+        :hover {
+            text-decoration: ${(props) => (props.underline ? 'underline' : 'none')};
         }
     }
 `;

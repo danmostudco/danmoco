@@ -1,5 +1,10 @@
 export default [
     {
+        date: 'July 16, 2020',
+        slug: 'bus',
+        title: 'Better Bus'
+    },
+    {
         date: 'March 15, 2020',
         slug: 'how-i-journal',
         title: 'How I Journal'
