@@ -1,10 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Link from '../../components/Link';
 import Nav from '../../components/Nav';
 import Page from '../../components/Page';
-import {column} from '../../styles/mixins';
 import {colors, spacing} from '../../styles/vars';
 
 import {Section} from '../../components/Section';
@@ -42,19 +40,19 @@ const Index = () => (
                     <h2>A Better Way To Report</h2>
                     <p>
                         LiveSafe connects users to the support that can help them resolve various safety incidents.
-                        Whether this is a slip and fall from a leaky pipe, stolen laptops from a school library, getting
-                        mental help for a colleague struggling with addiction, or even worse - LiveSafe dynamically puts
-                        users in contact with the resources that can aid in ambiguous situations.
+                        Whether this is a slip and fall from a leaky pipe, a stolen laptop from a school library,
+                        getting mental help for a colleague struggling with addiction, or even worse - LiveSafe
+                        dynamically puts users in contact with the resources that can aid in ambiguous situations.
                     </p>
                     <p>
-                        For the end user, this helps them resolve their safety issues sooner. For the organization, it
-                        helps them prevent costly react & respond protocols by replacing them with early interventions.
+                        For the end user, this resolves their safety issues sooner. For the organization, it prevents
+                        costly react & respond protocols by replacing them with early interventions.
                     </p>
                     <p>
                         However for most students and employees, safety and security incidents aren't regular, daily
-                        occurrences. As such, guiding users through the submission process and ensuring they feel like
-                        they will get a timely response is critical since using an app to talk to safety professionals
-                        is often foreign territory. I led a team researching issues with our old tip submission flow and
+                        occurrences. As such, guiding users through the submission process and ensuring they feel they
+                        will get a timely response is critical since using an app to talk to safety professionals is
+                        often foreign territory. I led a team researching issues with our old tip submission flow and
                         led the development of an upgrade across design, engineering, and data science departments.
                     </p>
                 </CaseSection>
@@ -63,8 +61,8 @@ const Index = () => (
                 <CaseSection>
                     <h2>Confidence & Quality Data</h2>
                     <p>
-                        Using LiveSafe’s categorized incident data, we trained a recommender engine to help guide users
-                        through the process of submitting a concern. We found in early iterations that asking a user to
+                        Using LiveSafe’s categorized incident data, we trained a recommender engine to guide users
+                        through the process of submitting a concern. In early iterations, we found that asking a user to
                         categorize and then submit led to tension in users feeling they needed to choose the “right”
                         incident type. The more we could prompt the user and have them confirm rather than provide the
                         raw inputs, the better.
@@ -88,9 +86,9 @@ const Index = () => (
                 <CaseSection>
                     <h2>Choose Your Adventure</h2>
                     <p>
-                        The most reliable machine is the one with the fewest moving parts. We took this approach with
-                        our chatbot, starting with a "happy path" and slowly adding features as our users needed aid or
-                        alternative routes.
+                        The most reliable machine is the one with the fewest moving parts. This was the principle that
+                        guided our chatbot development, starting with a "happy path" and slowly adding features as our
+                        users needed aid or alternative routes.
                     </p>
                     <p>
                         We ended up with three distinct jumping off points that converged on similar points - submitting
@@ -101,9 +99,9 @@ const Index = () => (
                     <h3>Start Typing</h3>
                     <p>
                         The quickest, easiest launch point. Type in what you need help with, and LiveSafe will get it to
-                        the right person in the right department. This flow simply takes in text, then analyzes it using
-                        our trained event classifier, and will then ask the user to tag the incident appropriately to
-                        ensure it goes to the right department.
+                        the right person in the right department. This flow simply takes in text, analyzes it using our
+                        trained event classifier, and will then ask the user to tag the incident appropriately to ensure
+                        it goes to the right department.
                     </p>
                     <p>
                         For example, tips involving security will be routed to the guard office. Concerns for mental
@@ -129,10 +127,10 @@ const Index = () => (
                         vending machine eating their money.
                     </p>
                     <p>
-                        To alleviate this fear, we added this "I need help now" button which would asyncronously fire an
+                        To alleviate this fear, we added this "I need help now" button which would asynchronousl fire an
                         "incoming message" to the security dashboard so an admin can prepare to respond, while this
                         connection was made the bot would collect details, speeding up the interaction. Most users ended
-                        up not using this option, but many took immediate solace in knowing it's available. It's mere
+                        up not using this option, but many took immediate solace in knowing it's available. Its mere
                         presence was useful in building credibility.
                     </p>
                     <img className="image_full-width" src="/static/images/safebot/twohandsphones.png"></img>
@@ -150,7 +148,7 @@ const Index = () => (
                     <p>
                         Users responded well to LiveSafe taking the first plunge when categorizing the provided
                         information. They could simply confirm or deny what our model thought was closest, which
-                        actually gave us a pretty wide degree of freedom in our model's recommendation, we simply had to
+                        actually gave us a pretty wide degree of freedom in our model's recommendation, We simply had to
                         ensure in the top 4 to 6 tags contained a "correct" answer.
                     </p>
                     <img className="image_960" src="/static/images/safebot/datamodeling.png"></img>
@@ -164,7 +162,7 @@ const Index = () => (
                     <h2 style={extraPadding}>A Guided Journey</h2>
                     <p>
                         Submitting security information is a bit like calling your doctor. You hope you don't have to do
-                        it at all, and if you do it likely isn't frequently enough to "master" the flow. With this in
+                        it at all, and if you do, it likely isn't frequently enough to "master" the flow. With this in
                         mind we set out to give a guided experience to instill confidence and a sense of progress in the
                         user as they went through the process.
                     </p>
@@ -224,7 +222,7 @@ const Index = () => (
                         <img src="/static/images/safebot/connectcomplete.jpg"></img>
                     </div>
                     <p>
-                        We sought to set clear expectations on users "time to human." Most users in testing noted that
+                        We sought to set clear expectations on users' "time to human." Most users in testing noted that
                         anything over a minute would be "unacceptable," especially in light of a time-sensitive report.
                         We introduced a timer which allows a user to see how long we expect their tip will take to get a
                         chat response, which kept them on the line for a very critical 60 to 90 seconds as we found a
@@ -277,7 +275,7 @@ const Index = () => (
                             <p>
                                 LiveSafe users don't send in an abundance of tips because ideally, users don't see
                                 security threats regularly. It brought a smile to my face to see users delighted by each
-                                step of the process as they navigated through a frictionaless submission process with
+                                step of the process as they navigated through a frictionless submission process with
                                 confidence.
                             </p>
                         </div>
