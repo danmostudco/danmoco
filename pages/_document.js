@@ -34,7 +34,7 @@ class CustomDocument extends Document {
     }
 }
 
-export async function getStaticProps(ctx) {
+CustomDocument.getInitialProps = async (ctx) => {
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
 
@@ -58,6 +58,6 @@ export async function getStaticProps(ctx) {
     } finally {
         sheet.seal();
     }
-}
+};
 
 export default CustomDocument;
