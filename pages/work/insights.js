@@ -29,143 +29,137 @@ const borderRadius = {
     borderRadius: '8px'
 };
 
-const description = 'Safebot';
+const description = 'Insights';
 const Index = () => (
     <Page description={description} image={'/static/images/avatar.jpg'} title={`Dan Morrison - ${description}`}>
         <Nav background-color={colors.dark} />
         <CaseMain>
             <CaseHero
-                title="Safebot"
+                title="Insights"
                 role="Product Manager"
-                year="2019"
+                year="2020"
                 background-color={'#fff'}
-                background-image={'/static/images/safebot/cb_hero_2.jpg'}
+                background-image={'/static/images/insights/in_hero.jpg'}
             />
             <Wrapper background-color="#4e5664">
                 <CaseSection>
-                    <h2>A Better Way To Report</h2>
+                    <h2>Intelligent Reporting</h2>
                     <p>
-                        LiveSafe connects users to the support that can help them resolve various safety incidents.
-                        Whether this is a slip and fall from a leaky pipe, a stolen laptop from a school library,
-                        getting mental help for a colleague struggling with addiction, or even worse - LiveSafe
-                        dynamically puts users in contact with the resources that can aid in ambiguous situations.
+                        Managing a security communications platform for your community can be overwhelming, as there are
+                        numerous moving parts to track. Who has downloaded the company app? Who is using what features I
+                        purchased? How much outbound communication is my team pushing, and about what topics? How many
+                        inbounds am I getting, and what is the content of those messages?
                     </p>
                     <p>
-                        For the end user, this resolves their safety issues sooner. For the organization, it prevents
-                        costly react & respond protocols by replacing them with early interventions.
+                        For the broad base of clients that deploy LiveSafe, answering these questions was challenging.
+                        We span over a dozen industries and workforces ranging from a couple hundred employees to
+                        hundreds of thousands. Additionally, at different points in a deployment lifecycle clients
+                        require different types of information, which multiplies the challenge manifold.
                     </p>
                     <p>
-                        However for most students and employees, safety and security incidents aren't regular, daily
-                        occurrences. As such, guiding users through the submission process and ensuring they feel they
-                        will get a timely response is critical since using an app to talk to safety professionals is
-                        often foreign territory. I led a team researching issues with our old tip submission flow and
-                        led the development of an upgrade across design, engineering, and data science departments.
+                        We set out to create a flexible product that would grow with the needs of our clients as their
+                        usage of the platform matured.
                     </p>
                 </CaseSection>
             </Wrapper>
             <Wrapper background-color="#18171d">
                 <CaseSection>
-                    <h2>Confidence & Quality Data</h2>
+                    <h2>Optimize for Flexibility</h2>
                     <p>
-                        Using LiveSafe’s categorized incident data, we trained a recommender engine to guide users
-                        through the process of submitting a concern. In early iterations, we found that asking a user to
-                        categorize and then submit led to tension in users feeling they needed to choose the “right”
-                        incident type. The more we could prompt the user and have them confirm rather than provide the
-                        raw inputs, the better.
-                    </p>
-                    <CaseQuote text="At the start people don’t want speed, they want clarity. Once they have clarity, they want speed."></CaseQuote>
-                    <p>
-                        We had to provide great service through the entire journey, not just the initial report. Since
-                        users don’t submit safety information on a day to day basis, letting them know they are in good
-                        hands was a critical first step, and offering assurances and cues during the submission process
-                        became pillars of success for the feature.
+                        We started with a one-size fits all report we would distribute to our clients on a monthly
+                        basis. Very quickly it became apparent that we would struggle to make this work for as wide and
+                        varied of a client-base as LiveSafe. Analyses that played well for our education clients and
+                        their broad campuses weren’t that relevant for our enterprise clients in single locations.
+                        Visualizations prepared for our healthcare clients and their 24/7 operations didn’t mesh with
+                        our event-driven sports & entertainment clients.
                     </p>
                     <p>
-                        Once the users understood our system could understand their concerns on a number of different
-                        dimensions, their focus shifted to having a speedy, quality interaction with the dispatcher
-                        resolving the tip. Everything from connecting to help, waiting for a response, and closeout was
-                        under a microscope.
+                        The team iterated over and over, watching clients who gravitated toward bits of our early
+                        reports and skipped over other entire sections. We knew from the disparate responses we would
+                        have to tackle the problem in an entirely different fashion.
+                    </p>
+                    <CaseQuote text="We couldn’t create just reports. We needed to create an engine that assembled reports dynamically based on context."></CaseQuote>
+                    <p>
+                        This made for an exciting challenge bounded by a litany of constraints: differing needs per
+                        client, limited engineering resources to execute, the need to rapidly prototype and experiment
+                        with real-world data. As a product manager, I had to lean into these constraints more than ever
+                        before and devise how my team could use them to our avantage.
                     </p>
                 </CaseSection>
             </Wrapper>
             <Wrapper background-color="#2d2d30">
                 <CaseSection>
-                    <h2>Choose Your Adventure</h2>
+                    <h2>Dynamic Reporting</h2>
                     <p>
-                        The most reliable machine is the one with the fewest moving parts. This was the principle that
-                        guided our chatbot development, starting with a "happy path" and slowly adding features as our
-                        users needed aid or alternative routes.
+                        We began crafting a monthly report to deliver to clients via email, with the idea that we would
+                        focus on surfacing key statistics and anomalous data directly in their inbox. In the same way
+                        users expect emails from their banks, their cloud providers, their insurance provider, their
+                        favorite brands, so too would clients get a digestible email regarding their LiveSafe activity.
+                        The emails covered the common questions our clients peppered us in check-in meetings: "Is this
+                        number normal?" "What does that look like for other clients?" "Can you guys tell me when you
+                        detect X or Y?"
                     </p>
                     <p>
-                        We ended up with three distinct jumping off points that converged on similar points - submitting
-                        a tip. Yet each of the starting points helped different types of users in various different
-                        mental states.
+                        A vessel emerged built for flexibility. A report that showed what was relevant for that month,
+                        and hide what was not, with some common-sense thresholds built in to determine what was in and
+                        what was out. If certain activity was steady, there was no sense in surfacing that to key
+                        stakeholders. But with enough volatility or change over time, we generated a small module
+                        detailing the change and some underlying information.
                     </p>
-                    <img className="image_960" src="/static/images/safebot/zoomPhone.jpg"></img>
-                    <h3>Start Typing</h3>
+                    <img className="image_960" src="/static/images/insights/tipresponsiveness.jpg"></img>
+                    <div className="h-stack collage">
+                        <img className="" src="/static/images/insights/darknuggets.jpg"></img>
+                        <img className="" src="/static/images/insights/insightsbranding.jpg"></img>
+                    </div>
+                    <h3>"I don't need another dashboard"</h3>
                     <p>
-                        The quickest, easiest launch point. Type in what you need help with, and LiveSafe will get it to
-                        the right person in the right department. This flow simply takes in text, analyzes it using our
-                        trained event classifier, and will then ask the user to tag the incident appropriately to ensure
-                        it goes to the right department.
-                    </p>
-                    <p>
-                        For example, tips involving security will be routed to the guard office. Concerns for mental
-                        health will be routed to counseling. Broken building infrastructure routed to facilities. Users
-                        enjoyed seeing the bot's efforts to help properly categorize events, giving them a sense of
-                        confidence their information would reach the proper, final destination.
-                    </p>
-                    <h3>What Can I report?</h3>
-                    <p>
-                        This button allowed for users to see the different categories a tip could be deposited into. By
-                        showing a few highly-used tags and asking the user to select what they had in mind, it was a
-                        teachable moment for first-time users. "What can I report" effectively became a training ground
-                        for the junior user, where more seasoned users could simply begin typing knowing how the process
-                        worked.
-                    </p>
-                    <h3>I need help now</h3>
-                    <p>
-                        Effectively an "eject" button. Many users were skeptical of the speed at which they might get
-                        help. Whether legitimate or not, our analytics showed many users mashed the "Emergency" button
-                        in LiveSafe to report non-emergency related tips, suggesting a fallacy that if they designated
-                        something as critical, it would be triaged faster (this isn't actually true, all inbounds get
-                        processed the same way). One user used the Report Emergency feature in the app to report the
-                        vending machine eating their money.
+                        Our research showed many security and administrative professionals were experiencing dashboard
+                        fatigue; every SAAS product they purchased came with another login, another set of charts to
+                        review, permissions to manage, and digging for information they wanted. Plus, many of our key
+                        PoC's spent very little time at their actual desks, often communicating with their staff via
+                        flurries of emails and text messages as they were on the go and in-between meetings, making
+                        dashboards a rarely accessed toy.
                     </p>
                     <p>
-                        To alleviate this fear, we added this "I need help now" button which would asynchronousl fire an
-                        "incoming message" to the security dashboard so an admin can prepare to respond, while this
-                        connection was made the bot would collect details, speeding up the interaction. Most users ended
-                        up not using this option, but many took immediate solace in knowing it's available. Its mere
-                        presence was useful in building credibility.
+                        Simple, mobile-friendly emails with snippets of information became the canvas we would use to
+                        paint our first analytics offering, and this delighted an on-the-go professional who wanted
+                        quick highlights from their deployment.
                     </p>
-                    <img className="image_full-width" src="/static/images/safebot/twohandsphones.png"></img>
+                    <img className="image_full-width" src="/static/images/insights/signuppagereport.jpg"></img>
                 </CaseSection>
             </Wrapper>
             <Wrapper background-color="#18171d">
                 <CaseSection>
-                    <h2>Feedback Loops</h2>
+                    <h2>Constructing Reports</h2>
                     <p>
-                        Our goal was to reduce the stakes of submitting tips, but many users felt anxiety with how to
-                        "properly" categorize certain incidents. Real-world safety incidents don't always fit into a
-                        clean information architecture, especially if something could happen but hasn't happened yet.
-                        Security officials just want a good enough first pass so they can dispatch the right help.
+                        Each Insights report is generated from a bank of analyses we continuously add to, and each is
+                        composed of three moving parts. First is a qualification criteria which ensures the client has
+                        enough relevant data to populate the visualization. Second, Insights queries our data warehouse
+                        to pull together all the data to construct a visualization, sometimes even pulling aggregate,
+                        anonymized stats from a client's peers for comparison. Finally, the data is showcased in a
+                        compartmentalized visual.
                     </p>
                     <p>
-                        Users responded well to LiveSafe taking the first plunge when categorizing the provided
-                        information. They could simply confirm or deny what our model thought was closest, which
-                        actually gave us a pretty wide degree of freedom in our model's recommendation, We simply had to
-                        ensure in the top 4 to 6 tags contained a "correct" answer.
+                        If they are particularly advanced, some clients qualify for many pieces of analysis. Others only
+                        qualify for one or two. We aim to provide something actionable and relevant based on their usage
+                        of the platform, either by showcasing particular highlights over the last month, or linking to
+                        resources in our Knowledge Base to inform the user how they could be further utilizing the
+                        platform.
                     </p>
-                    <img className="image_960" src="/static/images/safebot/datamodeling.png"></img>
+                    <img className="image_960" src="/static/images/insights/reportconstruction.jpg"></img>
                     <p>
-                        This marked a key milestone in our virtuous cycle of machines and humans curating LiveSafe data.
-                        Models would serve up their best guess, and then users on the client side would confirm or deny
-                        our guesses, giving us additional training data. Because we established this experiential
-                        handshake between our data science operation and mobile applications, this became a core
-                        competency of our offering.
+                        This building block approach was powerful, as it allowed us to rapidly show clients very
+                        different visualizations with only a little bit of upfront work to create each new analysis. If
+                        clients wanted a particular type of analysis, adding it to the repository and having it show up
+                        in the following month's report was trivial.
                     </p>
-                    <h2 style={extraPadding}>A Guided Journey</h2>
+                    <p>
+                        To enable this construct, we spent a great deal of time tinkering with the data and design
+                        paradigms that underpinned this ecosystem. We sought to serve up delightful tidbits of
+                        information in eye-catching, unique packaging. The primary vessel for this became known
+                        internally as the Nugget.
+                    </p>
+                    <h2 style={extraPadding}>The Nugget</h2>
                     <p>
                         Submitting security information is a bit like calling your doctor. You hope you don't have to do
                         it at all, and if you do, it likely isn't frequently enough to "master" the flow. With this in

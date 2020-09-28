@@ -211,6 +211,31 @@ const CaseSection = styled.div`
         }
     }
 
+    .h-stack.collage {
+        margin-top: 0px;
+        align-items: stretch;
+        grid-template-columns: 0.5fr 1fr;
+
+        @media (max-width: 991px) {
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 767px) {
+            margin-bottom: 20px;
+            grid-template-rows: auto;
+        }
+
+        @media (max-width: 479px) {
+            display: grid;
+            margin-bottom: 20px;
+            grid-auto-columns: 1fr;
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+            grid-template-columns: 0.5fr 1fr;
+            grid-template-rows: auto;
+        }
+    }
+
     .align-center {
         align-self: center;
     }
