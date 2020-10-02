@@ -286,7 +286,7 @@ const Index = () => (
                         beautiful design language for the product,{' '}
                         <a href="https://www.linkedin.com/in/tyler-mamrot-50986a105/">Tyler Mamrot</a> for providing
                         incredible full-stack capabilities to a team needing front-end and back-end chops,{' '}
-                        <a href="https://www.linkedin.com/in/tyler-mamrot-50986a105/">Ray Budd</a> for spinning up a
+                        <a href="https://www.linkedin.com/in/raymond-budd-7341b52a/">Ray Budd</a> for spinning up a
                         robust nugget prototyping framework integrated with our NLP capabilities, and{' '}
                         <a href="https://www.linkedin.com/in/james-nix-959a332a/">James Nix</a> for following the data
                         wherever it took us.
