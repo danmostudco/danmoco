@@ -140,6 +140,12 @@ const CaseSection = styled.div`
         }
     }
 
+    ._2-col.stack {
+        @media (max-width: 767px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
     ._3-col {
         display: grid;
         width: 100%;
@@ -234,6 +240,17 @@ const CaseSection = styled.div`
             grid-template-columns: 0.5fr 1fr;
             grid-template-rows: auto;
         }
+    }
+
+    .photo-collage {
+        display: grid;
+        width: 100%;
+        margin-bottom: 40px;
+        grid-auto-columns: 1fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        grid-template-columns: 0.5fr 1fr;
+        grid-template-rows: auto;
     }
 
     .align-center {

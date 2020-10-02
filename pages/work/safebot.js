@@ -172,7 +172,7 @@ const Index = () => (
                         mind we set out to give a guided experience to instill confidence and a sense of progress in the
                         user as they went through the process.
                     </p>
-                    <div className="_2-col">
+                    <div className="_2-col stack">
                         <img className="align-center" src="/static/images/safebot/connectme.jpg"></img>
                         <div className="align-center">
                             <h3>Our Bot</h3>

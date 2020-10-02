@@ -82,9 +82,9 @@ const AboutSection = () => (
         <AboutHeader margin-bottom="0px">Who's This Cowboy </AboutHeader>
         <Bio>
             <p>
-                I'm an analytical mind nested in the creative shell of a digital product manager. I blend rigorous
-                financial and operational savvy with technical and creative chops to build good stuff. I'm happiest when
-                teams I build and lead are shipping new capabilities that push the boundaries of our offerings.
+                I'm a user-focused and data-driven product management leader, blending rigorous financial and
+                operational savvy with technical and creative chops to build great experiences. I'm happiest when teams
+                I build and lead are shipping new capabilities that push the boundaries of our offerings.
                 <br />
                 <br />
                 As a product manager, team lead, consultant, and designer I have deployed solutions in problem spaces

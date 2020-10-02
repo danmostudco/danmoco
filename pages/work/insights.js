@@ -159,173 +159,137 @@ const Index = () => (
                         information in eye-catching, unique packaging. The primary vessel for this became known
                         internally as the Nugget.
                     </p>
-                    <h2 style={extraPadding}>The Nugget</h2>
-                    <p>
-                        Submitting security information is a bit like calling your doctor. You hope you don't have to do
-                        it at all, and if you do, it likely isn't frequently enough to "master" the flow. With this in
-                        mind we set out to give a guided experience to instill confidence and a sense of progress in the
-                        user as they went through the process.
-                    </p>
                     <div className="_2-col">
-                        <img className="align-center" src="/static/images/safebot/connectme.jpg"></img>
+                        <img className="align-center" src="/static/images/insights/thenuggetintro.jpg"></img>
                         <div className="align-center">
-                            <h3>Our Bot</h3>
+                            <h3>The Nugget</h3>
                             <p>
-                                A bot seemed like a natural choice to escort users through the flow in a cordial,
-                                non-intimidating fashion. This conversational tone helped us talk about options, status,
-                                and hiccups along the way. Once more, the combination of text entry and button tapping
-                                kept users more engaged during the submission process, even if it was a tiny bit slower.
-                            </p>
-                            <p>
-                                In going with this paradigm, we found our bot needed to overcommunicate to provide a
-                                sense of "forward momentum" to users. Even if we were still processing a request,
-                                providing in-line cues as to what was happening showcased progress in the reporting
-                                process, mitigating a sense of helplessness that can arise when expectations are not
-                                clearly communicated and updated.
+                                We designed these to be small tidbits of information we could mix and match for clients
+                                on a whim. Each nugget is a self-contained, compartmentalized piece of story-telling
+                                regarding the client's use of LiveSafe.
                             </p>
                         </div>
                     </div>
-                    <h3>Review Before Sending</h3>
+                    <h3>Spacious Nuggets</h3>
                     <p>
-                        We spent a great deal of time at the "moment of truth" in which a user will submit their final
-                        report to their organization. Submitting can be hard, especially with sensitive information, so
-                        we wanted to take care to ensure the user could see all their details in one place.
+                        Insights reports can get fairly information dense. In order to lighten the cognitive load of
+                        some of the findings, we prototyped different types of nuggets. One of my favorites was the
+                        concept of a "spacious nugget," which relied more on typography and imagery to give a bite-size
+                        piece of analysis.
                     </p>
                     <div className="_3-col">
-                        <img style={borderRadius} src="/static/images/safebot/summarybase.jpg"></img>
-                        <img
-                            className="hide-small-viewport"
-                            style={borderRadius}
-                            src="/static/images/safebot/summaryedit.jpg"
-                        ></img>
-                        <img style={borderRadius} src="/static/images/safebot/summarylocation.jpg"></img>
+                        <img style={borderRadius} src="/static/images/insights/spacious1.png"></img>
+                        <img style={borderRadius} src="/static/images/insights/spacious2.png"></img>
+                        <img style={borderRadius} src="/static/images/insights/spacious3.png"></img>
                     </div>
                     <p>
-                        In addition to allowing users to view their submission, we also focused on easy editing of
-                        content, location, and media. We found other bots would be unclear about what specific data was
-                        being transferred and when, so providing as much clarity as possible before pressing "send" was
-                        mission critical. This gave users a proper safety net in terms of owning their information
-                        before transmitting.
+                        That's not to say the spacious nuggets were "throwaway" nuggets. They were often answering
+                        quick, acute questions we heard back from clients, or conversation starters for when account
+                        managers reviewed their reports with clients.
                     </p>
-                    <h3>Connecting Sequence</h3>
+                    <h3>Rich Nuggets</h3>
                     <p>
-                        LiveSafe offers a two-way chat between users and safety officials which means users must wait
-                        for their tip to be opened, read, and responded to. In that regard, submitting is just the
-                        start. Earlier iterations of the LiveSafe platform suffered from drop-off of users who didn't
-                        know how long to wait for responses. Admins would eventually respond and ask for details but the
-                        user was nowhere to be found. This led to poor experiences on both the sending and receiving end
-                        of a communication.
+                        To balance some of the stylistic flavor of the spacious nuggets, we also had a number of more
+                        information-dense nuggets that made up the meat of the report. These richer nuggets often showed
+                        month over month trends, comparative analyses, benchmarked performance metrics, and more. Each
+                        visualization was a conversation unto itself.
                     </p>
-                    <div className="_3-col">
-                        <img src="/static/images/safebot/connectblue.jpg"></img>
-                        <img src="/static/images/safebot/connectyellow.jpg"></img>
-                        <img src="/static/images/safebot/connectcomplete.jpg"></img>
+                    <div className="photo-collage">
+                        <img src="/static/images/insights/rich1.png"></img>
+                        <img src="/static/images/insights/rich2.png"></img>
                     </div>
                     <p>
-                        We sought to set clear expectations on users' "time to human." Most users in testing noted that
-                        anything over a minute would be "unacceptable," especially in light of a time-sensitive report.
-                        We introduced a timer which allows a user to see how long we expect their tip will take to get a
-                        chat response, which kept them on the line for a very critical 60 to 90 seconds as we found a
-                        dispatcher to chat with them.
+                        LiveSafe deals in categorical incident data, so we often produced multiple takes of the same
+                        nugget using different sets of data. For example, we may show two tips over time charts in the
+                        same report: one with a deep dive on facilities incidents and one with a deep dive on traffic
+                        concerns. This way, if a client is particularly active within a certain class of information, we
+                        can provide the necessary level of granularity.
                     </p>
                     <p>
-                        Once we exceeded the allotted time, we informed users that their tip would be processed
-                        eventually and we could simply send a push notification to their phone to draw them back in when
-                        the time was right. This way, even with a few-minute delay users could still be at the ready to
-                        hold a conversation with an admin.
+                        The result was a visually stunning report, dynamically generated based on the exact needs of the
+                        client. The visual identity of the product was crisp and distinct, the mix of softer insights
+                        and more rigorous charting became a core pillar of the product. Plus, the fact this was all done
+                        via an email meant it was lightweight and extensible, something we desperately needed as we
+                        tried to hit key deadlines and deliver proofs of concept on different stories we wanted to tell.
+                    </p>
+                    <img className="image_full-width" src="/static/images/insights/reports.jpg"></img>
+                    <h2>Designed for Experimentation</h2>
+                    <p>
+                        In addition to the light-weight development cycle, one of the great benefits of creating a
+                        subscription-based email report was allowing us to experiment rapidly with new nuggets. We were
+                        able to test out new ideas, big and small, and send them out in each month's set of reports. If
+                        they resonated with customers, we moved them into our regular rotation. If they were a flop, we
+                        could iterate on the design or pull the nugget entirely.
                     </p>
                     <p>
-                        We even took pains to try and give a "ta-da" style moment when the user does get connected:
-                        flashing a banner and pop in a new, human icon. This little celebration at the end gave a moment
-                        of triumph and added to the sense of progress we had built up to this point. You have been
-                        connected!
-                    </p>
-                    <h3>Close Out Sequence</h3>
-                    <p>
-                        After chatting with the organization, we had two goals in mind: collect some feedback on the
-                        whole process from the user and provide the user with some catharsis by rating how things went.
-                        Users enjoyed getting to weigh in on the help they got, especially if it was just a few taps to
-                        rate and tag some aspects of the interaction.
-                    </p>
-                    <div className="_2-col">
-                        <img src="/static/images/safebot/rateexperience.jpg"></img>
-                        <img src="/static/images/safebot/tagexperience.jpg"></img>
-                    </div>
-                    <p>
-                        These interactions have been popularized by ride-share and food-delivery platforms, and it's
-                        important for LiveSafe to understand what aspects make great service in the personal safety
-                        industry. Very rarely do you get to rate your interaction with the security guard of your
-                        building, or the facilities manager of your campus, which is a shame especially when they do a
-                        great job. Understanding satisfaction is a key data-point.
+                        This greatly reduced the level of certainty we needed in proving out new ideas, which is a great
+                        space to be in when it comes to shipping a brand new offering. We knew we could suppress
+                        anything that didn't click for customers in the next report; so our tolerance for
+                        experimentation went up and allowed us to settle a lot of internal debates by simply looking at
+                        performance.
                     </p>
                     <p>
-                        This final prompt allows LiveSafe to collect quantitative and qualitative insights about the
-                        interaction to feed back into the organization to further improve future responses.
+                        We also had the ability to "soft launch" certain visualizations by limiting the clients who
+                        would see modules using our report generation criteria. Using this mechanic we could start small
+                        and slowly expand the number of clients who qualified for the nugget as we became more confident
+                        in the story.
+                    </p>
+                    <img className="image_960" src="/static/images/insights/reportexperiment.jpg"></img>
+                    <p>
+                        Our vault of nuggets was a Darwinian exercise in rising winners and sagging losers. Each quarter
+                        we would add additional nuggets and see how they fared in the ecosystem we constructed. Winners
+                        would propagate further into the Insights ecosystem, while losers were pulled back for more time
+                        in the lab. This constant push and pull made the product a joy to work on and see as ideas came
+                        to life through constant refinements.
                     </p>
                     <div className="h-stack">
-                        <img src="/static/images/safebot/someexamples.jpg"></img>
+                        <img src="/static/images/insights/downloadrate.jpg"></img>
                         <div>
-                            <h3>Right Module, Right Time</h3>
+                            <h3>Keeping It Light</h3>
                             <p>
-                                The chatbot was a joy to work on because it provided many unique design challenges - we
-                                had to select the right module for the right place in the flow. We ended up with much
-                                more than a simple chat interface, but a real showcase of modularized interaction design
-                                served up dynamically based on the direction the user took the interaction.
+                                I often found myself thinking "that could be a nugget" while sitting in meetings as we
+                                discussed the best way to surface very specific types of information to our clients. As
+                                national trends would change the topic of conversation and the information flowing in
+                                LiveSafe, we needed a simple, low-touch way to provide timely insights to our client
+                                base.
                             </p>
                             <p>
-                                LiveSafe users don't send in an abundance of tips because ideally, users don't see
-                                security threats regularly. It brought a smile to my face to see users delighted by each
-                                step of the process as they navigated through a frictionless submission process with
-                                confidence.
+                                The engine behind Insights kept us lean and agile in reacting to changing circumstances
+                                in our industry, and provides a solid framework to build on as the needs of customers
+                                evolve.
                             </p>
                         </div>
-                    </div>
-                    <div className="h-stack reverse">
-                        <div>
-                            <h3>Keep Things Moving</h3>
-                            <p>
-                                The use of a diversity of modules also helped us control the pace of the conversation.
-                                We could speed things up where needed, or slow things down when we need more time to
-                                connect the user or process data.
-                            </p>
-                            <p>
-                                By having such a varied set of experiences, users weren't overwhelmed but legitimately
-                                curious and intrigued by how we would guide them each step, with many users noting how
-                                much quicker and clearer things progressed than they first expected. We had turned the
-                                chatbot pattern into one that overperformed expectations, leaving users on a positive
-                                note.
-                            </p>
-                        </div>
-                        <img src="/static/images/safebot/connectedhandoff.jpg"></img>
                     </div>
                 </CaseSection>
             </Wrapper>
             <Wrapper background-color="#18171d">
                 <CaseSection>
-                    <h2>A Cohesive Effort</h2>
+                    <h2>Leaning Into Constraints</h2>
                     <p>
-                        Most exciting to me in developing this feature was the full company effort that enabled it. Our
-                        sales team sold every contract that allowed us to collect categorized incident data over several
-                        years. Our customer success team implemented and tweaked LiveSafe deployments to ensure they met
-                        clients' needs. Our engineering team worked in an iterative cycle to get the transitions and
-                        modules just right. Our data science team tinkered with endless models to best surface the right
-                        number of choices to help categorize user inputs.
+                        Early on in the research process we asked ourselves, "what is our data capable of telling us?"
+                        Insights centered around a fundamental challenge many companies face: understanding what your
+                        data can do and what your data can't do while being honest about the limitations and the
+                        possibilities. Some categories of data were abundant in certain clients, and lacking in others.
+                        A same-size reporting solution without some understanding of how to segment and adapt to
+                        different clients simply wouldn't do.
                     </p>
                     <p>
-                        While the feature looks like a simple conversational user interface, it reflects the sum of
-                        knowledge and experience developed from a company trying to make safety & security more
-                        streamlined and accessible across the world. To lead the effort in pioneering a feature that
-                        draws so heavily on so many moving parts was a real treat, and an amazing problem-space to work
-                        in.
+                        We used user research, technical-feasibility, data-analysis, and a whole lot of creativity to
+                        arrive at a solution tailor made for the unique challenges of the problem. The outcome was far
+                        from pre-determined, and instead arrived at through a rigorous commitment to experimentation and
+                        hypothesis testing that made the product much stronger than we first imagined. For that reason
+                        it was a joy to lead a team to deliver such an offering to market.
                     </p>
                     <p>
-                        A very special thanks to the multi-talented{' '}
-                        <a href="https://www.linkedin.com/in/geoff-nelowet-ba874736/">Geoff Nelowet</a> for incredible
-                        design leadership during this process,{' '}
-                        <a href="https://www.linkedin.com/in/timgillons/">Tim Gillons</a> for exceptional product
-                        management as we evolved this from initial concepts to full offering, and{' '}
-                        <a href="https://www.linkedin.com/in/james-nix-959a332a/">James Nix</a> for paving the way for
-                        the underlying data science to power the experience.
+                        A sincere thanks goes out to{' '}
+                        <a href="https://www.linkedin.com/in/geoff-nelowet-ba874736/">Geoff Nelowet</a> for creating a
+                        beautiful design language for the product,{' '}
+                        <a href="https://www.linkedin.com/in/tyler-mamrot-50986a105/">Tyler Mamrot</a> for providing
+                        incredible full-stack capabilities to a team needing front-end and back-end chops,{' '}
+                        <a href="https://www.linkedin.com/in/tyler-mamrot-50986a105/">Ray Budd</a> for spinning up a
+                        robust nugget prototyping framework integrated with our NLP capabilities, and{' '}
+                        <a href="https://www.linkedin.com/in/james-nix-959a332a/">James Nix</a> for following the data
+                        wherever it took us.
                     </p>
                 </CaseSection>
             </Wrapper>
