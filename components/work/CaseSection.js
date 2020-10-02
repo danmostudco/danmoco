@@ -140,6 +140,12 @@ const CaseSection = styled.div`
         }
     }
 
+    ._2-col.stack {
+        @media (max-width: 767px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
     ._3-col {
         display: grid;
         width: 100%;
@@ -209,6 +215,42 @@ const CaseSection = styled.div`
         @media (max-width: 479px) {
             position: static;
         }
+    }
+
+    .h-stack.collage {
+        margin-top: 0px;
+        align-items: stretch;
+        grid-template-columns: 0.5fr 1fr;
+
+        @media (max-width: 991px) {
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 767px) {
+            margin-bottom: 20px;
+            grid-template-rows: auto;
+        }
+
+        @media (max-width: 479px) {
+            display: grid;
+            margin-bottom: 20px;
+            grid-auto-columns: 1fr;
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+            grid-template-columns: 0.5fr 1fr;
+            grid-template-rows: auto;
+        }
+    }
+
+    .photo-collage {
+        display: grid;
+        width: 100%;
+        margin-bottom: 40px;
+        grid-auto-columns: 1fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        grid-template-columns: 0.5fr 1fr;
+        grid-template-rows: auto;
     }
 
     .align-center {

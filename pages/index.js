@@ -120,7 +120,7 @@ const Index = () => (
             <HomeHeroSection className="home">
                 <HeroText>Dan Morrison</HeroText>
                 <Tagline>
-                    Curious product leader with experience turning strategic imperatives into digital products.
+                    Proven product leader with experience turning strategic imperatives into digital products.
                 </Tagline>
             </HomeHeroSection>
             <WorkSection>

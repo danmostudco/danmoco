@@ -34,7 +34,13 @@ const Index = () => (
     <Page description={description} image={'/static/images/avatar.jpg'} title={`Dan Morrison - ${description}`}>
         <Nav background-color={colors.dark} />
         <CaseMain>
-            <CaseHero background-color={'#fff'} background-image={'/static/images/safebot/cb_hero_2.jpg'} />
+            <CaseHero
+                title="Safebot"
+                role="Product Manager"
+                year="2019"
+                background-color={'#fff'}
+                background-image={'/static/images/safebot/cb_hero_2.jpg'}
+            />
             <Wrapper background-color="#4e5664">
                 <CaseSection>
                     <h2>A Better Way To Report</h2>
@@ -166,7 +172,7 @@ const Index = () => (
                         mind we set out to give a guided experience to instill confidence and a sense of progress in the
                         user as they went through the process.
                     </p>
-                    <div className="_2-col">
+                    <div className="_2-col stack">
                         <img className="align-center" src="/static/images/safebot/connectme.jpg"></img>
                         <div className="align-center">
                             <h3>Our Bot</h3>

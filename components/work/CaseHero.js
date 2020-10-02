@@ -22,7 +22,7 @@ const StyledCaseHero = styled(Wrapper)`
     }
 
     @media (max-width: 479px) {
-        height: 45vh;
+        height: 35vh;
         margin-top: 0px;
         background-position: 50% 0px;
     }
@@ -116,12 +116,13 @@ const StyledCaseHero = styled(Wrapper)`
     }
 `;
 
-// TODO: need to make this filled in with props
 const CaseHero = (props) => (
     <StyledCaseHero background-color={props['background-color']} background-image={props['background-image']}>
         <div className="hero_section">
-            <h1>Safebot</h1>
-            <p>Product Manager · 2019</p>
+            <h1>{props.title}</h1>
+            <p>
+                {props.role} · {props.year}
+            </p>
         </div>
     </StyledCaseHero>
 );
